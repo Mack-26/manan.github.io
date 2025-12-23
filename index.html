@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manan Arora | AI Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Bubble animation container -->
+    <div class="bubbles" aria-hidden="true">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+
+    <!-- Light rays overlay -->
+    <div class="light-rays" aria-hidden="true"></div>
+
+    <!-- Marine life silhouettes -->
+    <div class="marine-life" aria-hidden="true">
+        <!-- Manta Ray -->
+        <svg class="sea-creature manta" viewBox="0 0 200 100" fill="currentColor">
+            <path d="M100,10 C60,10 30,30 5,60 C25,75 50,80 75,70 C85,85 95,95 100,95 C105,95 115,85 125,70 C150,80 175,75 195,60 C170,30 140,10 100,10 Z M60,40 C55,40 50,35 50,30 C50,25 55,20 60,20 C65,20 70,25 70,30 C70,35 65,40 60,40 Z M140,40 C135,40 130,35 130,30 C130,25 135,20 140,20 C145,20 150,25 150,30 C150,35 145,40 140,40 Z M100,50 L100,75"/>
+        </svg>
+        
+        <!-- Sea Turtle -->
+        <svg class="sea-creature turtle" viewBox="0 0 100 80" fill="currentColor">
+            <ellipse cx="50" cy="40" rx="30" ry="25"/>
+            <ellipse cx="50" cy="40" rx="25" ry="20" fill="none" stroke="currentColor" stroke-width="2" opacity="0.5"/>
+            <path d="M20,35 Q5,30 8,40 Q5,50 20,45"/>
+            <path d="M80,35 Q95,30 92,40 Q95,50 80,45"/>
+            <path d="M30,60 Q25,75 35,70 Q40,65 38,55"/>
+            <path d="M70,60 Q75,75 65,70 Q60,65 62,55"/>
+            <ellipse cx="50" cy="15" rx="8" ry="10"/>
+            <circle cx="46" cy="13" r="1.5"/>
+            <circle cx="54" cy="13" r="1.5"/>
+        </svg>
+        
+        <!-- Jellyfish -->
+        <svg class="sea-creature jellyfish" viewBox="0 0 60 100" fill="currentColor">
+            <path d="M10,30 Q10,5 30,5 Q50,5 50,30 Q50,40 30,35 Q10,40 10,30 Z"/>
+            <path d="M15,35 Q12,55 18,70" fill="none" stroke="currentColor" stroke-width="2" opacity="0.6"/>
+            <path d="M25,38 Q20,60 25,80" fill="none" stroke="currentColor" stroke-width="2" opacity="0.6"/>
+            <path d="M35,38 Q40,60 35,80" fill="none" stroke="currentColor" stroke-width="2" opacity="0.6"/>
+            <path d="M45,35 Q48,55 42,70" fill="none" stroke="currentColor" stroke-width="2" opacity="0.6"/>
+        </svg>
+        
+        <!-- Small fish school (dots) -->
+        <div class="fish-school">
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+            <span></span><span></span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-links">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#research" class="nav-link">Research</a>
+            <a href="#projects" class="nav-link">Projects</a>
+        </div>
+        <div class="social-links">
+            <a href="mailto:aromanan@umich.edu" class="social-link" title="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/mananarora2611/" target="_blank" class="social-link" title="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/Mack-26" target="_blank" class="social-link" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="20251218_Resume.pdf" target="_blank" class="resume-link" title="Resume">
+                Resume
+            </a>
+        </div>
+    </nav>
+
+    <!-- Section indicator dots -->
+    <div class="section-dots">
+        <a href="#home" class="dot active" data-section="home"></a>
+        <a href="#about" class="dot" data-section="about"></a>
+        <a href="#research" class="dot" data-section="research"></a>
+        <a href="#projects" class="dot" data-section="projects"></a>
+    </div>
+
+    <!-- Main content container -->
+    <main class="container">
+        
+        <!-- Home Section -->
+        <section id="home" class="section home-section">
+            <div class="section-content">
+                <div class="greeting">
+                    <span class="wave">👋</span>
+                    <span class="greeting-text">Hey there!</span>
+                </div>
+                <h1 class="hero-title">
+                    I'm <span class="name-highlight">Manan Arora</span>
+                </h1>
+                <p class="hero-subtitle">
+                    AI Engineer building intelligent systems that make a difference.<br>
+                    Currently diving deep into Machine Learning at University of Michigan.
+                </p>
+                <div class="scroll-indicator">
+                    <span>Scroll to explore</span>
+                    <div class="scroll-arrow">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about-section">
+            <div class="section-content">
+                <div class="about-grid">
+                    <div class="about-image">
+                        <div class="image-frame">
+                            <img src="IMG_5008.JPG" alt="Manan Arora" class="profile-photo">
+                            <div class="image-bubbles">
+                                <span></span><span></span><span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <h2 class="section-title">About Me</h2>
+                        <div class="title-underline"></div>
+                        <p class="about-description">
+                            MS in Computer Engineering specializing in Machine Learning at 
+                            <strong>University of Michigan</strong>, with two years of experience designing 
+                            and building AI and Data Analytics products. I've shipped 4 production systems 
+                            used by 2000+ enterprise users and published two peer-reviewed papers.
+                        </p>
+                        <p class="about-description">
+                            Previously at <strong>AuxoAI</strong> in San Francisco, 
+                            where I helped scale the organization 10x while launching Gen-AI and 
+                            Data products. When I'm not training models, you'll find me exploring 
+                            underwater worlds or advocating for environmental causes.
+                        </p>
+                        
+                        <div class="education">
+                            <h3 class="subsection-title">Education</h3>
+                            <div class="edu-item">
+                                <span class="edu-school">University of Michigan – Ann Arbor</span>
+                                <span class="edu-degree">MS Computer Engineering – ML</span>
+                                <span class="edu-date">2025 – 2027</span>
+                            </div>
+                            <div class="edu-item">
+                                <span class="edu-school">Sardar Patel Institute of Technology</span>
+                                <span class="edu-degree">BTech Electronics & Telecom • GPA 4.0/4</span>
+                                <span class="edu-date">2019 – 2023</span>
+                            </div>
+                        </div>
+
+                        <div class="interests">
+                            <span class="interest-tag">🤖 AI/ML</span>
+                            <span class="interest-tag">🌊 PADI Advanced Diver</span>
+                            <span class="interest-tag">🌱 Environmentalist</span>
+                            <span class="interest-tag">📚 Avid Reader</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Section -->
+        <section id="research" class="section research-section">
+            <div class="section-content">
+                <h2 class="section-title">Research</h2>
+                <div class="title-underline"></div>
+                <p class="section-intro">
+                    Diving deep into the unknown, exploring new frontiers in AI for sustainability.
+                </p>
+                <div class="research-grid">
+                    <article class="research-card">
+                        <div class="card-icon">
+                            <i class="fas fa-car-battery"></i>
+                        </div>
+                        <div class="card-meta">
+                            <span class="card-venue">Ziyou Song Lab • UMich</span>
+                            <span class="card-date">Oct 2025 – Present</span>
+                        </div>
+                        <h3 class="card-title">ML for Second-Life EV Batteries</h3>
+                        <p class="card-description">
+                            Conducting research on machine learning for second-life electric vehicle 
+                            batteries, focusing on modeling degradation mechanisms and predicting 
+                            remaining useful life using electrochemical impedance spectroscopy (EIS) data.
+                        </p>
+                        <div class="card-tags">
+                            <span>Battery ML</span>
+                            <span>EIS Analysis</span>
+                            <span>Sustainability</span>
+                        </div>
+                    </article>
+                    <article class="research-card">
+                        <div class="card-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div class="card-meta">
+                            <span class="card-venue">Independent Research</span>
+                            <span class="card-date">May 2024 – Feb 2025</span>
+                        </div>
+                        <h3 class="card-title">Physics-Informed ML for Climate</h3>
+                        <p class="card-description">
+                            Researched ML architectures to embed physical laws into loss functions 
+                            of neural networks (ANN, RNN, CNN), ensuring predictions remain 
+                            scientifically valid. Authored a comprehensive review paper synthesizing 
+                            state-of-the-art Physics-Informed ML for climate change solutions.
+                        </p>
+                        <div class="card-tags">
+                            <span>PINN</span>
+                            <span>Climate ML</span>
+                            <span>Review Paper</span>
+                        </div>
+                    </article>
+                    <article class="research-card">
+                        <div class="card-icon">
+                            <i class="fas fa-link"></i>
+                        </div>
+                        <div class="card-meta">
+                            <span class="card-venue">IEEE AIC 2024</span>
+                            <span class="card-date">May 2022 – Feb 2023</span>
+                        </div>
+                        <h3 class="card-title">Blockchain Birth Certificates</h3>
+                        <p class="card-description">
+                            Designed a Blockchain-based Public Key Infrastructure (PKI) for secure 
+                            generation of birth certificates with multiple stakeholders. Achieved 
+                            per-certificate cost of &lt;$0.01 and reduced turnaround from days to &lt;30s.
+                        </p>
+                        <div class="card-tags">
+                            <span>Blockchain</span>
+                            <span>PKI</span>
+                            <span>Published</span>
+                        </div>
+                        <a href="https://ieeexplore.ieee.org/document/10730987" target="_blank" class="card-link">
+                            Read Paper <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects-section">
+            <div class="section-content">
+                <h2 class="section-title">Projects</h2>
+                <div class="title-underline"></div>
+                <p class="section-intro">
+                    A collection of explorations and creations from my journey.
+                </p>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <h3 class="project-title">Self-Service Data Analytics Platform</h3>
+                        <p class="project-description">
+                            Built a platform that converts natural language questions into SQL 
+                            queries and interactive visualizations using Claude LLM. Reduced 
+                            insight delivery time by 90% for 300+ business users who previously 
+                            waited 90+ minutes for analyst support.
+                        </p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>LLM</span>
+                            <span>AWS</span>
+                            <span>SQL</span>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <h3 class="project-title">Smart Investigator – Manufacturing AI</h3>
+                        <p class="project-description">
+                            Developed an AI-powered investigation assistant using Agentic AI 
+                            built on Vertex AI that automatically extracts critical information 
+                            from 1000+ page failure reports, identifies patterns, and surfaces 
+                            root causes with 96% accuracy.
+                        </p>
+                        <div class="project-tags">
+                            <span>Agentic AI</span>
+                            <span>Vertex AI</span>
+                            <span>Python</span>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <h3 class="project-title">Master Data Management Solution</h3>
+                        <p class="project-description">
+                            Architected an MDM solution using PySpark on Databricks that 
+                            consolidated disparate data sources and enriched records with 
+                            third-party market intelligence, creating a single source of truth.
+                        </p>
+                        <div class="project-tags">
+                            <span>PySpark</span>
+                            <span>Databricks</span>
+                            <span>ETL</span>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <h3 class="project-title">Vehicle Distance Detection</h3>
+                        <p class="project-description">
+                            Implemented computer vision algorithms with camera calibration 
+                            for absolute scale recovery, achieving 95.6% accuracy in distance 
+                            estimation using a single monocular camera via triangulation.
+                        </p>
+                        <div class="project-tags">
+                            <span>Computer Vision</span>
+                            <span>Python</span>
+                            <span>OpenCV</span>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <h3 class="project-title">Field HRMS Mobile App</h3>
+                        <p class="project-description">
+                            Led a cross-functional team of 4 to create a mobile HRMS app 
+                            with geofenced attendance tracking, biometric authentication, 
+                            and compliance alerts. Adopted by 500+ field employees.
+                        </p>
+                        <div class="project-tags">
+                            <span>iOS</span>
+                            <span>Android</span>
+                            <span>Product Lead</span>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <h3 class="project-title">Real-time Object Distance Detection</h3>
+                        <p class="project-description">
+                            Engineered a Python-based solution using advanced image processing 
+                            to measure object distances accurately in real-time without 
+                            complex hardware setups.
+                        </p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Image Processing</span>
+                            <span>Real-time</span>
+                        </div>
+                    </article>
+                </div>
+                <footer class="footer">
+                    <p>© 2025 Manan Arora</p>
+                </footer>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
