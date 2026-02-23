@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Viben — Before & After</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:        #090d18;
+    --surface:   #0f1623;
+    --border:    #1e2840;
+    --muted:     #3a4a6b;
+    --text-dim:  #6b7fa8;
+    --text:      #c8d4f0;
+    --text-hi:   #eef2ff;
+
+    --red-bg:    #160a0a;
+    --red-border:#3d1212;
+    --red-hi:    #f87171;
+    --red-mid:   #dc2626;
+    --red-dim:   #7f1d1d;
+
+    --green-bg:  #081410;
+    --green-border:#133a26;
+    --green-hi:  #4ade80;
+    --green-mid: #16a34a;
+    --green-dim: #14532d;
+
+    --blue:      #60a5fa;
+    --amber:     #fbbf24;
+  }
+
+  body {
+    background: var(--bg);
+    font-family: 'Instrument Sans', sans-serif;
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 24px 64px;
+  }
+
+  /* ── HEADER ───────────────────────────────────────── */
+  header {
+    text-align: center;
+    margin-bottom: 52px;
+  }
+  header .eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  header h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(26px, 4vw, 42px);
+    color: var(--text-hi);
+    font-weight: 400;
+    line-height: 1.1;
+  }
+  header h1 em {
+    font-style: italic;
+    color: var(--green-hi);
+  }
+  header p {
+    margin-top: 14px;
+    font-size: 14px;
+    color: var(--text-dim);
+    max-width: 520px;
+    margin-inline: auto;
+    line-height: 1.6;
+  }
+
+  /* ── PANELS ───────────────────────────────────────── */
+  .panels {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 0;
+    width: 100%;
+    max-width: 1280px;
+    align-items: start;
+  }
+
+  .panel {
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+  }
+  .panel.before {
+    background: var(--red-bg);
+    border-color: var(--red-border);
+  }
+  .panel.after {
+    background: var(--green-bg);
+    border-color: var(--green-border);
+  }
+
+  .panel-header {
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .panel.before .panel-header { background: #1f0707; border-bottom: 1px solid var(--red-border); }
+  .panel.after  .panel-header { background: #071a0e; border-bottom: 1px solid var(--green-border); }
+
+  .panel-header .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .panel.before .dot { background: var(--red-mid); box-shadow: 0 0 8px var(--red-mid); }
+  .panel.after  .dot { background: var(--green-mid); box-shadow: 0 0 8px var(--green-mid); }
+
+  .panel-header .label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  .panel.before .label { color: var(--red-hi); }
+  .panel.after  .label { color: var(--green-hi); }
+
+  .panel-body {
+    padding: 28px 24px 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  /* ── SCENE ─────────────────────────────────────────── */
+  .scene {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/3;
+  }
+  .scene svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* ── DIVIDER ──────────────────────────────────────── */
+  .divider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    gap: 12px;
+    position: relative;
+    top: 120px;
+  }
+  .divider::before {
+    content: '';
+    position: absolute;
+    top: -60px; bottom: -60px;
+    left: 50%;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, var(--border) 30%, var(--border) 70%, transparent);
+  }
+  .vs-badge {
+    font-family: 'DM Serif Display', serif;
+    font-size: 15px;
+    font-style: italic;
+    color: var(--muted);
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    width: 42px; height: 42px;
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ── ISSUES / BENEFITS LIST ──────────────────────── */
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .list-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .list-item .icon {
+    font-size: 13px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .panel.before .list-item .icon { color: var(--red-hi); }
+  .panel.after  .list-item .icon { color: var(--green-hi); }
+  .list-item span { color: var(--text-dim); }
+  .list-item strong { color: var(--text); font-weight: 500; }
+
+  /* ── PERSON node (SVG-used via HTML position) ───── */
+  .node-label {
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 11px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <p class="eyebrow">Problem → Solution</p>
+  <h1>AI in the classroom is <em>broken</em>.<br/>LearnPool fixes it.</h1>
+  <p>Students use AI in isolation — their professor has zero visibility. LearnPool makes it a shared, course-aware experience.</p>
+</header>
+
+<div class="panels">
+
+  <!-- ══════════════════════ BEFORE ══════════════════════ -->
+  <div class="panel before">
+    <div class="panel-header">
+      <div class="dot"></div>
+      <span class="label">Today &nbsp;·&nbsp; Fragmented</span>
+    </div>
+    <div class="panel-body">
+
+      <!-- SVG scene -->
+      <div class="scene">
+        <svg viewBox="0 0 480 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <filter id="glow-red">
+              <feGaussianBlur stdDeviation="3" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+
+          <!-- Professor (top center) — isolated -->
+          <!-- Prof figure -->
+          <circle cx="240" cy="44" r="22" fill="#1f0707" stroke="#7f1d1d" stroke-width="1.5"/>
+          <text x="240" y="50" text-anchor="middle" font-size="22">👨‍🏫</text>
+          <text x="240" y="80" text-anchor="middle" font-family="'DM Mono',monospace" font-size="11" fill="#c8d4f0">Professor</text>
+
+          <!-- Prof speech bubble: posts slides -->
+          <rect x="290" y="22" width="152" height="46" rx="8" fill="#2a0808" stroke="#7f1d1d" stroke-width="1"/>
+          <text x="366" y="40" text-anchor="middle" font-family="'Instrument Sans',sans-serif" font-size="10" fill="#f87171">Posts slides to LMS</text>
+          <text x="366" y="56" text-anchor="middle" font-family="'Instrument Sans',sans-serif" font-size="10" fill="#6b7fa8">Answers emails days later</text>
+          <polygon points="290,38 278,44 290,50" fill="#2a0808" stroke="#7f1d1d" stroke-width="1"/>
+
+          <!-- Dashed barrier line -->
+          <line x1="30" y1="108" x2="450" y2="108" stroke="#7f1d1d" stroke-width="1" stroke-dasharray="6 4"/>
+          <text x="240" y="124" text-anchor="middle" font-family="'DM Mono',monospace" font-size="9" fill="#7f1d1d" letter-spacing="1">— NO VISIBILITY —</text>
+
+          <!-- 3 Students, spread out, no connections between them -->
+          <!-- Student A -->
+          <circle cx="80" cy="190" r="20" fill="#1f0707" stroke="#3d1212" stroke-width="1.5"/>
+          <text x="80" y="196" text-anchor="middle" font-size="20">🧑‍💻</text>
+          <text x="80" y="222" text-anchor="middle" font-family="'DM Mono',monospace" font-size="10" fill="#c8d4f0">Student A</text>
+
+          <!-- Student B -->
+          <circle cx="240" cy="190" r="20" fill="#1f0707" stroke="#3d1212" stroke-width="1.5"/>
+          <text x="240" y="196" text-anchor="middle" font-size="20">🧑‍💻</text>
+          <text x="240" y="222" text-anchor="middle" font-family="'DM Mono',monospace" font-size="10" fill="#c8d4f0">Student B</text>
+
+          <!-- Student C -->
+          <circle cx="400" cy="190" r="20" fill="#1f0707" stroke="#3d1212" stroke-width="1.5"/>
+          <text x="400" y="196" text-anchor="middle" font-size="20">🧑‍💻</text>
+          <text x="400" y="222" text-anchor="middle" font-family="'DM Mono',monospace" font-size="10" fill="#c8d4f0">Student C</text>
+
+          <!-- X marks between students (no connection) -->
+          <text x="160" y="196" text-anchor="middle" font-size="16" fill="#7f1d1d" font-weight="bold">✕</text>
+          <text x="320" y="196" text-anchor="middle" font-size="16" fill="#7f1d1d" font-weight="bold">✕</text>
+
+          <!-- Each student → own ChatGPT silo (arrows down) -->
+          <line x1="80" y1="232" x2="80" y2="268" stroke="#3a4a6b" stroke-width="1.5" marker-end="url(#arr-gray)"/>
+          <line x1="240" y1="232" x2="240" y2="268" stroke="#3a4a6b" stroke-width="1.5" marker-end="url(#arr-gray)"/>
+          <line x1="400" y1="232" x2="400" y2="268" stroke="#3a4a6b" stroke-width="1.5" marker-end="url(#arr-gray)"/>
+
+          <!-- ChatGPT boxes -->
+          <rect x="40" y="272" width="80" height="46" rx="6" fill="#12121a" stroke="#2a2a40" stroke-width="1"/>
+          <text x="80" y="293" text-anchor="middle" font-size="16">🤖</text>
+          <text x="80" y="310" text-anchor="middle" font-family="'DM Mono',monospace" font-size="9" fill="#6b7fa8">ChatGPT</text>
+
+          <rect x="200" y="272" width="80" height="46" rx="6" fill="#12121a" stroke="#2a2a40" stroke-width="1"/>
+          <text x="240" y="293" text-anchor="middle" font-size="16">🤖</text>
+          <text x="240" y="310" text-anchor="middle" font-family="'DM Mono',monospace" font-size="9" fill="#6b7fa8">ChatGPT</text>
+
+          <rect x="360" y="272" width="80" height="46" rx="6" fill="#12121a" stroke="#2a2a40" stroke-width="1"/>
+          <text x="400" y="293" text-anchor="middle" font-size="16">🤖</text>
+          <text x="400" y="310" text-anchor="middle" font-family="'DM Mono',monospace" font-size="9" fill="#6b7fa8">ChatGPT</text>
+
+          <!-- "Silo" labels -->
+          <text x="80" y="332" text-anchor="middle" font-family="'DM Mono',monospace" font-size="8" fill="#3d1212">PRIVATE SILO</text>
+          <text x="240" y="332" text-anchor="middle" font-family="'DM Mono',monospace" font-size="8" fill="#3d1212">PRIVATE SILO</text>
+          <text x="400" y="332" text-anchor="middle" font-family="'DM Mono',monospace" font-size="8" fill="#3d1212">PRIVATE SILO</text>
+
+          <!-- Arrow markers -->
+          <defs>
+            <marker id="arr-gray" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L8,3 z" fill="#3a4a6b"/>
+            </marker>
+          </defs>
+        </svg>
+      </div>
+
+      <!-- Issues list -->
+      <div class="list">
+        <div class="list-item"><span class="icon">✗</span><span>Students ask the <strong>same questions</strong> in isolation — no shared learning</span></div>
+        <div class="list-item"><span class="icon">✗</span><span>AI answers are <strong>untethered</strong> from course material — may be wrong or off-topic</span></div>
+        <div class="list-item"><span class="icon">✗</span><span>Professor is <strong>completely blind</strong> to what students are struggling with</span></div>
+        <div class="list-item"><span class="icon">✗</span><span>No data to improve curriculum or <strong>adapt lectures</strong> to real confusion</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════════════════ DIVIDER ══════════════════════ -->
+  <div class="divider">
+    <div class="vs-badge">vs</div>
+  </div>
+
+  <!-- ══════════════════════ AFTER ═══════════════════════ -->
+  <div class="panel after">
+    <div class="panel-header">
+      <div class="dot"></div>
+      <span class="label">LearnPool &nbsp;·&nbsp; Connected</span>
+    </div>
+    <div class="panel-body">
+
+      <!-- SVG scene -->
+      <div class="scene">
+        <svg viewBox="0 0 480 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="hub-glow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#16a34a" stop-opacity="0.25"/>
+              <stop offset="100%" stop-color="#16a34a" stop-opacity="0"/>
+            </radialGradient>
+            <marker id="arr-green" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L8,3 z" fill="#16a34a"/>
+            </marker>
+            <marker id="arr-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L8,3 z" fill="#3b82f6"/>
+            </marker>
+            <marker id="arr-green-s" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L7,3 z" fill="#4ade80"/>
+            </marker>
+            <marker id="arr-blue-s" markerWidth="7" markerHeight="7" refX="1" refY="3" orient="auto" markerUnits="strokeWidth">
+              <path d="M7,0 L7,6 L0,3 z" fill="#3b82f6"/>
+            </marker>
+          </defs>
+
+          <!-- Glow behind hub -->
+          <circle cx="240" cy="190" r="90" fill="url(#hub-glow)"/>
+
+          <!-- Hub: LearnPool platform (center) -->
+          <circle cx="240" cy="190" r="62" fill="#071a0e" stroke="#16a34a" stroke-width="2"/>
+          <text x="240" y="178" text-anchor="middle" font-size="24">🎓</text>
+          <text x="240" y="200" text-anchor="middle" font-family="'DM Serif Display',serif" font-size="13" fill="#f0fdf4" font-style="italic">LearnPool</text>
+          <text x="240" y="216" text-anchor="middle" font-family="'DM Mono',monospace" font-size="8" fill="#4ade80" letter-spacing="0.5">shared AI workspace</text>
+
+          <!-- Professor (top) -->
+          <circle cx="240" cy="44" r="22" fill="#071a0e" stroke="#16a34a" stroke-width="1.5"/>
+          <text x="240" y="50" text-anchor="middle" font-size="22">👨‍🏫</text>
+          <text x="240" y="80" text-anchor="middle" font-family="'DM Mono',monospace" font-size="10" fill="#c8d4f0">Professor</text>
+
+          <!-- Prof → Hub (bidirectional) -->
+          <!-- down arrow -->
+          <line x1="240" y1="87" x2="240" y2="126" stroke="#16a34a" stroke-width="1.5" marker-end="url(#arr-green)"/>
+          <!-- up arrow (feedback loop) -->
+          <line x1="234" y1="128" x2="234" y2="88" stroke="#4ade80" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arr-green-s)"/>
+
+          <!-- Prof bubble -->
+          <rect x="278" y="26" width="160" height="52" rx="7" fill="#071a0e" stroke="#16a34a" stroke-width="1"/>
+          <text x="358" y="44" text-anchor="middle" font-family="'Instrument Sans',sans-serif" font-size="10" fill="#86efac">📊 Live Q&amp;A dashboard</text>
+          <text x="358" y="58" text-anchor="middle" font-family="'Instrument Sans',sans-serif" font-size="10" fill="#86efac">📁 Uploads course docs</text>
+          <text x="358" y="72" text-anchor="middle" font-family="'Instrument Sans',sans-serif" font-size="10" fill="#6b7fa8">Marks questions addressed</text>
+          <polygon points="278,44 266,52 278,60" fill="#071a0e" stroke="#16a34a" stroke-width="1"/>
+
+          <!-- Student A (bottom-left) -->
+          <circle cx="90" cy="298" r="20" fill="#071a0e" stroke="#1d4ed8" stroke-width="1.5"/>
+          <text x="90" y="304" text-anchor="middle" font-size="20">🧑‍💻</text>
+          <text x="90" y="330" text-anchor="middle" font-family="'DM Mono',monospace" font-size="10" fill="#c8d4f0">Student A</text>
+
+          <!-- Student B (bottom-center) -->
+          <circle cx="240" cy="310" r="20" fill="#071a0e" stroke="#1d4ed8" stroke-width="1.5"/>
+          <text x="240" y="316" text-anchor="middle" font-size="20">🧑‍💻</text>
+          <text x="240" y="342" text-anchor="middle" font-family="'DM Mono',monospace" font-size="10" fill="#c8d4f0">Student B</text>
+
+          <!-- Student C (bottom-right) -->
+          <circle cx="390" cy="298" r="20" fill="#071a0e" stroke="#1d4ed8" stroke-width="1.5"/>
+          <text x="390" y="304" text-anchor="middle" font-size="20">🧑‍💻</text>
+          <text x="390" y="330" text-anchor="middle" font-family="'DM Mono',monospace" font-size="10" fill="#c8d4f0">Student C</text>
+
+          <!-- Students ↔ Hub -->
+          <line x1="108" y1="282" x2="186" y2="238" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arr-blue)"/>
+          <line x1="240" y1="290" x2="240" y2="254" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arr-blue)"/>
+          <line x1="372" y1="282" x2="294" y2="238" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arr-blue)"/>
+
+          <!-- Students ↔ each other (shared feed) -->
+          <line x1="112" y1="298" x2="218" y2="308" stroke="#4ade80" stroke-width="1" stroke-dasharray="4 3"/>
+          <line x1="262" y1="308" x2="368" y2="298" stroke="#4ade80" stroke-width="1" stroke-dasharray="4 3"/>
+
+          <!-- upvote labels -->
+          <text x="163" y="295" text-anchor="middle" font-family="'DM Mono',monospace" font-size="8" fill="#4ade80">▲ upvote</text>
+          <text x="317" y="295" text-anchor="middle" font-family="'DM Mono',monospace" font-size="8" fill="#4ade80">▲ upvote</text>
+
+          <!-- "asks question" labels on student→hub arrows -->
+          <text x="138" y="252" text-anchor="middle" font-family="'DM Mono',monospace" font-size="8" fill="#3b82f6" transform="rotate(-28,138,252)">asks</text>
+          <text x="256" y="270" text-anchor="start" font-family="'DM Mono',monospace" font-size="8" fill="#3b82f6">asks</text>
+          <text x="342" y="252" text-anchor="middle" font-family="'DM Mono',monospace" font-size="8" fill="#3b82f6" transform="rotate(28,342,252)">asks</text>
+
+          <!-- "analytics" label on feedback loop -->
+          <text x="256" y="108" text-anchor="start" font-family="'DM Mono',monospace" font-size="8" fill="#4ade80">analytics</text>
+        </svg>
+      </div>
+
+      <!-- Benefits list -->
+      <div class="list">
+        <div class="list-item"><span class="icon">✓</span><span>All questions flow into a <strong>shared, searchable feed</strong> — no duplication</span></div>
+        <div class="list-item"><span class="icon">✓</span><span>AI answers are <strong>grounded in course materials</strong> — accurate and on-topic</span></div>
+        <div class="list-item"><span class="icon">✓</span><span>Professor sees a <strong>live dashboard</strong> of what students are struggling with</span></div>
+        <div class="list-item"><span class="icon">✓</span><span>Q&amp;A history becomes a <strong>feedback loop</strong> to improve future lectures</span></div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
