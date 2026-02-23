@@ -30,7 +30,7 @@ export const projects = [
     solution:
       'Applied physics-informed machine learning to electrochemical impedance spectroscopy (EIS) data to predict battery state of health. Combined classical equivalent circuit models with neural networks to capture degradation mechanisms that pure data-driven approaches miss.',
     links: [],
-    artifact: { type: 'image', src: '/artifacts/battery-flow.png', alt: 'Battery ML flow diagram' },
+    artifact: null,
   },
   {
     slug: 'hrms',
