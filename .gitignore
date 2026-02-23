@@ -12,3 +12,8 @@ node_modules/
 
 # Build artifacts
 *.tsbuildinfo
+
+# Large media files
+*.MOV
+*.mov
+Artifacts/HRMS/HRMS
