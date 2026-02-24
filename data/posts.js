@@ -10,7 +10,7 @@ export const posts = [
 
 At the Ziyou Song Lab at UMich, I'm applying ML to predict the remaining useful life of lithium-ion batteries using electrochemical impedance spectroscopy (EIS) data.
 
-EIS measures how a battery responds to small AC signals across a range of frequencies — the resulting impedance spectrum is a fingerprint of the battery's internal state.
+EIS measures how a battery responds to small AC signals across a range of frequencies  -  the resulting impedance spectrum is a fingerprint of the battery's internal state.
 
 ### Why this matters
 
@@ -18,7 +18,7 @@ Second-life batteries (repurposed from EVs into stationary storage) could unlock
 
 ### Our approach
 
-We're combining physics-based equivalent circuit models with neural networks — encoding known electrochemical relationships as inductive biases. Early results look promising.
+We're combining physics-based equivalent circuit models with neural networks  -  encoding known electrochemical relationships as inductive biases. Early results look promising.
 
 *More updates as the research progresses.*
     `.trim(),
@@ -29,7 +29,7 @@ We're combining physics-based equivalent circuit models with neural networks —
     title: 'Covering the AI Summit',
     date: '2024-11-15',
     excerpt:
-      "Notes from attending an AI summit — what's hype, what's real, and where I think things are heading.",
+      "Notes from attending an AI summit  -  what's hype, what's real, and where I think things are heading.",
     content: `
 ## The AI Summit
 
@@ -39,13 +39,13 @@ Recently attended an AI summit in the Bay Area. Here are my honest notes.
 
 **Agents are the real wave.** Every major lab is building infrastructure for autonomous agents that can take multi-step actions. The tooling is maturing fast.
 
-**Multimodal is becoming table stakes.** Vision + language models are no longer exotic — they're becoming the default interface for enterprise AI.
+**Multimodal is becoming table stakes.** Vision + language models are no longer exotic  -  they're becoming the default interface for enterprise AI.
 
 **The gap between research and production is real.** The demos are impressive. Deploying reliably at scale is a completely different challenge.
 
 ### My take
 
-We're early in the agent era. The next 2 years will be about reliability, cost, and trust — not just capability.
+We're early in the agent era. The next 2 years will be about reliability, cost, and trust  -  not just capability.
 
 *These are my personal observations, not from any official capacity.*
     `.trim(),
@@ -56,7 +56,7 @@ We're early in the agent era. The next 2 years will be about reliability, cost, 
     title: 'Learnings from VLMs',
     date: '2024-09-10',
     excerpt:
-      "What I learned from working with Vision-Language Models — architectures, failure modes, and what's actually hard.",
+      "What I learned from working with Vision-Language Models  -  architectures, failure modes, and what's actually hard.",
     content: `
 ## What's actually hard about VLMs
 
@@ -64,7 +64,7 @@ After spending months with Vision-Language Models, here's what surprised me.
 
 ### Spatial reasoning is still weak
 
-VLMs are remarkably good at describing images but struggle with precise spatial relationships — "is object A to the left of B?" type questions are hit or miss.
+VLMs are remarkably good at describing images but struggle with precise spatial relationships  -  "is object A to the left of B?" type questions are hit or miss.
 
 ### Hallucination is a bigger problem than it looks
 

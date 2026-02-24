@@ -11,7 +11,7 @@ export async function generateMetadata({ params }) {
   const post = getPostBySlug(slug);
   if (!post) return {};
   return {
-    title: `${post.title} — Manan Arora`,
+    title: `${post.title}  -  Manan Arora`,
     description: post.excerpt,
   };
 }

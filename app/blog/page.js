@@ -2,7 +2,7 @@ import { posts } from '@/data/posts';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Blog — Manan Arora',
+  title: 'Blog  -  Manan Arora',
   description: 'Writing on AI, research, building, and what comes next.',
 };
 

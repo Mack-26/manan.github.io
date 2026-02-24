@@ -9,10 +9,10 @@ const MICHIGAN_SLIDES = [
   { type: 'image', src: '/images/profile/me_at_uni.jpg',        caption: 'First day on Central Campus' },
   { type: 'image', src: '/images/michigan/library_study.jpg',   caption: 'Late nights in the Duderstadt' },
   { type: 'image', src: '/images/michigan/group_study.jpg',     caption: 'Study sessions with the crew' },
-  { type: 'image', src: '/images/michigan/my_schedule.jpg',     caption: 'No free blocks — just vibes' },
+  { type: 'image', src: '/images/michigan/my_schedule.jpg',     caption: 'No free blocks  -  just vibes' },
   { type: 'image', src: '/images/michigan/detroit_river.jpg',   caption: 'Detroit river in January' },
   { type: 'image', src: '/images/michigan/pride_of_detroit.jpg',caption: 'GM Ren Cen at dusk' },
-  { type: 'video', src: '/images/michigan/umich_football.mp4',  caption: 'Michigan vs. ??? — Big House energy' },
+  { type: 'video', src: '/images/michigan/umich_football.mp4',  caption: 'Michigan vs. ???  -  Big House energy' },
 ];
 
 /* ── Dive slideshow slides ── */
@@ -74,7 +74,7 @@ export default function AboutClient() {
   return (
     <div style={{ overflowX: 'hidden' }}>
 
-      {/* ══════════════ SECTION 1 — MUMBAI ══════════════ */}
+      {/* ══════════════ SECTION 1  -  MUMBAI ══════════════ */}
       <section
         style={{
           minHeight: '100vh',
@@ -121,7 +121,7 @@ export default function AboutClient() {
             color: 'rgba(255,200,50,0.85)', fontSize: 'clamp(0.9rem, 2vw, 1.15rem)',
             fontWeight: 500, marginBottom: '1.5rem', letterSpacing: '0.05em',
           }}>
-            मुंबई से हूँ — दिल अभी भी वहीं है
+            मुंबई से हूँ  -  दिल अभी भी वहीं है
           </motion.p>
 
           {/* Big headline */}
@@ -216,7 +216,7 @@ export default function AboutClient() {
           />
         </svg>
 
-        {/* Airplane emoji — scroll-linked, works both directions */}
+        {/* Airplane emoji  -  scroll-linked, works both directions */}
         <motion.div
           style={{
             position: 'absolute',
@@ -246,7 +246,7 @@ export default function AboutClient() {
         </div>
       </div>
 
-      {/* ══════════════ SECTION 2 — MICHIGAN ══════════════ */}
+      {/* ══════════════ SECTION 2  -  MICHIGAN ══════════════ */}
       <section
         style={{
           minHeight: '100vh',
@@ -328,7 +328,7 @@ export default function AboutClient() {
                 color: 'var(--fg-muted)', lineHeight: 1.9,
                 fontSize: 'clamp(0.9rem, 1.8vw, 1rem)', marginBottom: '1.5rem',
               }}>
-                Moved 8,000 miles for a degree — ended up building robots, publishing
+                Moved 8,000 miles for a degree  -  ended up building robots, publishing
                 research, and doing scuba diving between deadlines. Michigan hit
                 different.
               </motion.p>
@@ -342,7 +342,7 @@ export default function AboutClient() {
         </div>
       </section>
 
-      {/* ══════════════ SECTION 3 — DIVE ══════════════ */}
+      {/* ══════════════ SECTION 3  -  DIVE ══════════════ */}
       <section
         style={{
           minHeight: '100vh',
@@ -390,7 +390,7 @@ export default function AboutClient() {
             </motion.p>
           </motion.div>
 
-          {/* Dive slideshow — full width, tall */}
+          {/* Dive slideshow  -  full width, tall */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -408,7 +408,7 @@ export default function AboutClient() {
         </div>
       </section>
 
-      {/* ══════════════ SECTION 4 — EXPERIENCE + CONNECT ══════════════ */}
+      {/* ══════════════ SECTION 4  -  EXPERIENCE + CONNECT ══════════════ */}
       <section
         style={{
           minHeight: '100vh',

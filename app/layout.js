@@ -18,11 +18,11 @@ const playfair = Playfair_Display({
 });
 
 export const metadata = {
-  title: 'Manan Arora — AI Engineer & Researcher',
+  title: 'Manan Arora  -  AI Engineer & Researcher',
   description:
     'AI Engineer and MS student at University of Michigan. Building intelligent systems, researching ML for sustainability.',
   openGraph: {
-    title: 'Manan Arora — AI Engineer & Researcher',
+    title: 'Manan Arora  -  AI Engineer & Researcher',
     description:
       'AI Engineer and MS student at University of Michigan.',
     type: 'website',

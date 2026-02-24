@@ -198,7 +198,7 @@ export default function Home() {
           }}
         />
 
-        {/* Photo — smaller than the blob so the blob shows around it */}
+        {/* Photo  -  smaller than the blob so the blob shows around it */}
         <div
           style={{
             position: 'relative',
