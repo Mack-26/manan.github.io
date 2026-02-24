@@ -2,8 +2,8 @@ import { projects } from '@/data/projects';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Projects  -  Manan Arora',
-  description: 'Research and engineering projects by Manan Arora  -  AI, ML, sustainability, and more.',
+  title: 'Projects | Manan Arora',
+  description: 'Research and engineering projects by Manan Arora in AI, ML, sustainability, and more.',
 };
 
 export default function ProjectsPage() {
@@ -50,8 +50,7 @@ export default function ProjectsPage() {
               lineHeight: 1.7,
             }}
           >
-            AI systems, published research, and engineering  -  spanning ML,
-            sustainability, and data infrastructure.
+            Building AI systems and publishing research across ML, sustainability, and data infrastructure.
           </p>
         </div>
 
