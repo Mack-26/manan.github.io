@@ -75,8 +75,7 @@ export default function Home() {
             marginBottom: '2.5rem',
           }}
         >
-          MS @ University of Michigan. Building AI for a better world.
-          Environmentalist by conviction, engineer by craft, highly caffeinated by necessity.
+          Building AI for a better world. Engineer by craft, founder mindset, highly caffeinated by necessity.
         </p>
 
         {/* CTA */}
