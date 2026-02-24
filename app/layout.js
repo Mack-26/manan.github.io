@@ -1,6 +1,7 @@
 import { Inter_Tight, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import Nav from '@/components/Nav';
+import { Analytics } from '@vercel/analytics/next';
 
 const interTight = Inter_Tight({
   subsets: ['latin'],
@@ -41,6 +42,7 @@ export default function RootLayout({ children }) {
         <Nav />
 
         {children}
+        <Analytics />
       </body>
     </html>
   );
