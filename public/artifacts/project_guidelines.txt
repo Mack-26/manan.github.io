@@ -1,0 +1,55 @@
+1. The Project Card (The Teaser)
+This remains your highly scannable entry point on the main portfolio page.
+
+Title: Crisp and descriptive.
+
+The Hook: A one-sentence summary of the value proposition.
+
+Tech Stack: 3 to 4 core technologies.
+
+Key Metric: A quantifiable win.
+
+2. The Project Page (The STAR Deep Dive)
+This is the internal page structure. Notice how the headers guide the reader through a logical story without explicitly using the rigid "Situation, Task, Action, Result" labels.
+
+A. Hero Section & Quick Facts
+
+Title & Subtitle: Expand slightly on the card.
+
+Project Meta-Data: * Role: Lead Engineer, Sole Founder, or Research Assistant.
+
+Timeline: Start and end dates.
+
+Category: e.g., Machine Learning Research, B2B Software.
+
+Hero Visual: A clean architecture diagram or a screenshot.
+
+
+Shutterstock
+Explore
+B. The Context & The Problem (Situation + Task)
+Combine the first two parts of STAR into a compelling executive summary.
+
+The Landscape: Briefly explain the environment. For example, if you are working on second-life battery analysis, mention the industry shift toward sustainability and the unreliability of purely data-driven degradation models.
+
+The Bottleneck: What was the specific technical gap?
+
+The Objective: Define exactly what you set out to build or prove to solve that bottleneck.
+
+C. Technical Architecture & Execution (Action)
+This is the most critical section for a technical portfolio. This is where you prove you can build.
+
+System Design: Break down the architecture. If you are integrating physics-based constraints into an ML model, explain how the pipeline feeds domain knowledge into the neural network.
+
+Tech Stack Justification: Do not just list tools. Explain why you chose PyTorch over TensorFlow, or why a specific database schema was necessary for your data volume.
+
+The Toughest Engineering Challenge: Isolate one major roadblock. Explain the problem (e.g., handling temporal context in vision language models) and walk through the exact steps you took to engineer a solution.
+
+D. Outcomes & Takeaways (Result)
+Close the loop by proving the value of your work.
+
+Quantifiable Impact: Did the model achieve a specific accuracy threshold? Did the system reduce inference latency by a certain percentage? Did the product generate revenue?
+
+Deliverables: Links to a GitHub repository, a live demo, or a published paper.
+
+Lessons Learned: One concise takeaway about system design, optimization, or product development that you will carry into your next role.
