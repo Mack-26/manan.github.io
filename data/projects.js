@@ -3,7 +3,7 @@ export const projects = [
     slug: 'learnpool',
     title: 'LearnPool',
     type: 'Project',
-    meta: 'Ross AI Hackathon · 2025',
+    meta: 'Ross AI Hackathon · 2026',
     summary:
       'A shared, course-aware AI workspace that replaces isolated ChatGPT usage with a collaborative Q&A platform. Professors get live visibility into what students are struggling with.',
     tags: ['AI', 'EdTech', 'RAG', 'Next.js', 'Hackathon Winner'],
