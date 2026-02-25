@@ -131,11 +131,6 @@ export const projects = [
       { label: 'GitHub', href: 'https://github.com/Mack-26/so101', external: true },
     ],
     artifact: { type: 'image', src: '/artifacts/so101/robot_arm.jpg', alt: 'SO101 robot arm' },
-    videos: [
-      { src: '/artifacts/so101/robot_1.mp4', label: 'Teleoperation demo' },
-      { src: '/artifacts/so101/robot_2.mp4', label: 'Pick and place' },
-      { src: '/artifacts/so101/robot_3.mp4', label: 'Autonomous task' },
-    ],
   },
 ];
 
