@@ -25,11 +25,17 @@
   .narrowOnly { display: block; }
 }
 
-/* Soft scroll-snap on desktop only (never on mobile, never with reduced motion). */
-@media (min-width: 1200px) and (prefers-reduced-motion: no-preference) {
+/* Page-by-page scrolling: About → What I'm exploring → Experience + footer.
+   Desktop sections are ~one screen each, so snapping is firm (mandatory); on phones and
+   tablets sections run taller than the screen, so it's a gentle pull (proximity).
+   Off entirely with reduced motion. */
+@media (prefers-reduced-motion: no-preference) {
   :global(html):has(.page) { scroll-snap-type: y proximity; }
   .snap { scroll-snap-align: start; }
   .snapEnd { scroll-snap-align: end; }
+}
+@media (min-width: 1200px) and (prefers-reduced-motion: no-preference) {
+  :global(html):has(.page) { scroll-snap-type: y mandatory; }
 }
 
 .link {
@@ -254,7 +260,7 @@
   border-radius: 18px;
   overflow: hidden;
   background: var(--stone);
-  transition: width 700ms cubic-bezier(.65, 0, .35, 1);
+  transition: width 700ms cubic-bezier(.65, 0, .35, 1), height 560ms cubic-bezier(.2, .8, .2, 1);
 }
 .stage {
   position: absolute;
@@ -446,7 +452,8 @@
   .kicker::before { width: 24px; }
   .kicker span { font-size: 12px; }
 
-  .about { min-height: 0; padding-top: 28px; padding-bottom: 36px; }
+  /* Header is taller on phones; keep the page-1 snap point at the very top so it stays visible. */
+  .about { min-height: 0; padding-top: 28px; padding-bottom: 36px; scroll-margin-top: 200px; }
   .aboutGrid { display: flex; flex-direction: column; gap: 18px; padding: 0; }
   .aboutP { font-size: 17px; }
   .links { font-size: 12px; }

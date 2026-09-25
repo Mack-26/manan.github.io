@@ -61,10 +61,12 @@ function DesktopCards({ reduced }) {
   const [sel, setSel] = useState(-1);
   const [rowRef, W] = useWidth();
   const vh = useViewportHeight();
-  // Fill the screen below the heading, within sensible bounds (design: 600).
-  const H = Math.round(clamp(vh - 230, 560, 720));
-  const eq = (W - 2 * GAP) / 3, open = Math.round(W * OPEN), mini = (W - open - 2 * GAP) / 2;
   const t = sel >= 0 ? PANELS[sel] : null;
+  // Fill the screen below the heading, within sensible bounds (design: 600). When a card is
+  // open the 96px question row appears, so the cards give that back and the section stays
+  // one screen tall (it's a scroll-snap page).
+  const H = Math.round(clamp(vh - 230 - (t ? 96 : 0), 520, 720));
+  const eq = (W - 2 * GAP) / 3, open = Math.round(W * OPEN), mini = (W - open - 2 * GAP) / 2;
 
   return (
     <>
