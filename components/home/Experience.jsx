@@ -8,9 +8,9 @@ import { useWidth } from './Explore';
 const ENTRIES = [
   { org: 'University of Mumbai', dates: '2019 — 2023', role: 'B.Tech · Electronics & Telecommunication', line: 'Sardar Patel Institute of Technology.', logo: { src: '/assets/logo-spit.png', alt: 'University of Mumbai logo', square: true } },
   { org: 'AuxoAI', dates: '2023 — 2025', role: 'AI Engineer', line: 'Built retrieval and text-to-SQL systems for an enterprise AI platform.', logo: { src: '/assets/logo-auxoai.png', alt: 'AuxoAI logo' } },
-  { org: 'University of Michigan', dates: '2025 — 2027', role: 'MS · Electrical & Computer Engineering', line: 'Signal processing and machine learning.', initials: 'UM', current: true },
-  { org: 'UMich Research', dates: '2025 — present', role: 'AI Researcher', line: 'Reinforcement learning, VLMs and multimodal learning.', initials: 'UM', branch: true },
-  { org: 'Honeywell', dates: 'Summer 2026', role: 'AI Engineering Intern', line: 'Language models for edge AI and multi-agent systems.', initials: 'HW' },
+  { org: 'University of Michigan', dates: '2025 — 2027', role: 'MS · Electrical & Computer Engineering', line: 'Signal processing and machine learning.', logo: { src: '/assets/logo-umich.svg', alt: 'University of Michigan logo', square: true }, current: true },
+  { org: 'UMich Research', dates: '2025 — present', role: 'AI Researcher', line: 'Reinforcement learning, VLMs and multimodal learning.', logo: { src: '/assets/logo-umich.svg', alt: 'University of Michigan logo', square: true }, branch: true },
+  { org: 'Honeywell', dates: 'Summer 2026', role: 'AI Engineering Intern', line: 'Language models for edge AI and multi-agent systems.', logo: { src: '/assets/logo-honeywell.svg', alt: 'Honeywell logo' } },
 ];
 
 // Desktop geometry from design/Home.dc.html (a 1248 × 420 canvas).
