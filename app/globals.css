@@ -18,8 +18,23 @@
   --border:      #e8e8e8;
   --dark:        #1a1a1a;
   --ease-expo:   cubic-bezier(0.16, 1, 0.3, 1);
-  --bg:          #F9F6F3;
-  --text:        #1B1624;
+  --bg:          #FEFEFE;
+  --text:        #1C1C1C;
+
+  /* Homepage design tokens (design-handoff/README.md) */
+  --paper:       #FEFEFE;
+  --stone:       #EDECEC;
+  --sage-light:  #E0E7D7;
+  --sage:        #B7C396;
+  --olive:       #4E5A2E;
+  --rose:        #BA9A91;
+  --ink:         #1C1C1C;
+  --ink-2:       #4A4A4A;
+  --muted:       #555555;
+  --hairline:    #CCCCCC;
+  --serif: var(--font-playfair), Georgia, serif;
+  --sans:  var(--font-work-sans), system-ui, sans-serif;
+  --mono:  var(--font-plex-mono), ui-monospace, monospace;
 }
 
 /* ── Reset ───────────────────────────────────── */
@@ -37,6 +52,7 @@ html {
 body {
   background: var(--bg);
   color: var(--text);
+  font-family: var(--sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;

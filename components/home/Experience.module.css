@@ -1,0 +1,150 @@
+/* Timeline — desktop horizontal (Home.dc.html), mobile vertical (HomeMobile.dc.html). */
+
+.tile {
+  flex-shrink: 0;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: 1px solid var(--hairline);
+  background: var(--paper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tile img { display: block; max-width: none; }
+.initials {
+  font-family: var(--mono);
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--ink-2);
+}
+.dates {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin-top: 6px;
+}
+.org {
+  font-family: var(--serif);
+  font-weight: 600;
+  line-height: 1.2;
+  transition: color 240ms ease;
+}
+.role { font-size: 13px; line-height: 1.4; color: var(--ink-2); }
+.line { font-size: 14px; line-height: 1.5; color: var(--ink); }
+
+.future {
+  box-sizing: border-box;
+  padding: 16px;
+  border: 1.5px dashed #767676;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.futureKicker {
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 11px;
+  line-height: 1.5;
+}
+.futureText {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.35;
+  color: var(--ink-2);
+}
+
+/* ── Desktop ─────────────────────────────────── */
+.desk { position: relative; }
+.canvas { position: absolute; left: 0; top: 0; transform-origin: 0 0; }
+.canvas .future { position: absolute; }
+.lines { position: absolute; left: 0; top: 0; }
+.entry {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  cursor: default;
+}
+.dotBtn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.dotBtn span {
+  border-radius: 50%;
+  transition: transform 260ms cubic-bezier(.2, .8, .2, 1);
+}
+@keyframes xpPulse { 0%, 100% { opacity: .9; transform: scale(1) } 50% { opacity: .25; transform: scale(1.35) } }
+.pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: xpPulse 2.4s ease-in-out infinite;
+}
+
+/* ── Mobile ──────────────────────────────────── */
+.mob { list-style: none; margin: 0; padding: 0; position: relative; }
+.mItem {
+  position: relative;
+  padding: 0 0 26px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.mItem .tile.initials { font-size: 14px; }
+.mItem .future { padding: 14px; border-radius: 12px; gap: 4px; }
+.mItem .futureText { font-size: 15px; }
+.mDash {
+  position: absolute;
+  left: 13px;
+  top: 30px;
+  bottom: -24px;
+  border-left: 1.5px dashed #767676;
+}
+.mFutureDot {
+  position: absolute;
+  left: 1px;
+  top: 4px;
+  width: 26px;
+  height: 26px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 1.5px dashed var(--ink);
+  background: var(--paper);
+}
+.mLine {
+  position: absolute;
+  left: 13px;
+  width: 1.5px;
+  background: var(--ink);
+}
+.mDot {
+  position: absolute;
+  left: 8px;
+  top: 18px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--ink);
+}
+.mDotCurrent { left: 6px; top: 16px; width: 16px; height: 16px; box-shadow: 0 0 0 5px #DCE3CF; }
+.mBranch { padding-left: 66px; }
+.mDotBranch { left: 39px; top: 19px; width: 10px; height: 10px; background: var(--olive); }
+.mCurve { position: absolute; left: 14px; top: 24px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse { animation: none; }
+  .dotBtn span, .org { transition: none; }
+}
