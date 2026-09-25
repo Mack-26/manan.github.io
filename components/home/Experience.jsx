@@ -33,13 +33,13 @@ const TEXT = [
 function Logo({ e, size }) {
   if (e.logo && e.logo.square)
     return (
-      <span className={x.tile} style={{ width: size, height: size, padding: 2 }}>
+      <span className={x.tile} style={{ width: size, height: size }}>
         <img src={e.logo.src} alt={e.logo.alt} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
       </span>
     );
   if (e.logo)
     return (
-      <span className={x.tile} style={{ height: size, padding: '0 12px', alignSelf: 'flex-start' }}>
+      <span className={x.tile} style={{ height: size, alignSelf: 'flex-start' }}>
         <img src={e.logo.src} alt={e.logo.alt} style={{ height: size === 52 ? 18 : 16, width: 'auto' }} />
       </span>
     );

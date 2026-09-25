@@ -3,12 +3,9 @@
 .tile {
   flex-shrink: 0;
   box-sizing: border-box;
-  border-radius: 10px;
-  border: 1px solid var(--hairline);
-  background: var(--paper);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 .tile img { display: block; max-width: none; }
 .initials {
