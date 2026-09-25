@@ -168,7 +168,7 @@ function Desktop({ v }) {
         {v.isCompact && (
           <>
             <div style={{ position: "absolute", left: "0", top: "0", right: "0", bottom: "0", background: "#FEFEFE", display: "flex", justifyContent: "center" }}>
-              <div style={{ width: `${v.peekW}px`, maxWidth: "100%", boxSizing: "border-box", padding: "30px 28px", display: "flex", flexDirection: "column", gap: "16px" }}>
+              <div style={{ width: `${v.peekW}px`, maxWidth: "100%", height: "100%", boxSizing: "border-box", padding: "30px 28px 40px", display: "flex", flexDirection: "column", justifyContent: "flex-end", gap: "16px" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", fontFamily: "var(--mono)", fontSize: "11px", color: "#555555" }}>
                   <span>
                     <span style={{ color: "#4E5A2E" }}>

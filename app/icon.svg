@@ -1,13 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="8" fill="#1B1624"/>
-  <text
-    x="16"
-    y="22"
-    font-family="Georgia, serif"
-    font-size="13"
-    font-weight="700"
-    fill="#F9F6F3"
-    text-anchor="middle"
-    letter-spacing="0.5"
-  >MA</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    .bg { fill: #1C1C1C } .m { stroke: #FEFEFE } .dot { fill: #B7C396 }
+    @media (prefers-color-scheme: dark) { .bg { fill: #FEFEFE } .m { stroke: #1C1C1C } .dot { fill: #4E5A2E } }
+  </style>
+  <rect class="bg" width="64" height="64" rx="15"/>
+  <polyline class="m" points="15,47 15,17 32,35 49,17 49,41" fill="none" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="dot" cx="49" cy="48.5" r="6"/>
 </svg>
