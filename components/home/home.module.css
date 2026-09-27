@@ -26,16 +26,14 @@
 }
 
 /* Page-by-page scrolling: About → What I'm exploring → Experience + footer.
-   Desktop sections are ~one screen each, so snapping is firm (mandatory); on phones and
-   tablets sections run taller than the screen, so it's a gentle pull (proximity).
-   Off entirely with reduced motion. */
-@media (prefers-reduced-motion: no-preference) {
-  :global(html):has(.page) { scroll-snap-type: y proximity; }
+   Only where each section fits on one screen (wide and tall enough). On phones, tablets and
+   short windows sections are taller than the screen, and snapping there drags you back to
+   the section top while you're trying to read the bottom — so it's off. Also off with
+   reduced motion. */
+@media (min-width: 1200px) and (min-height: 760px) and (prefers-reduced-motion: no-preference) {
+  :global(html):has(.page) { scroll-snap-type: y mandatory; }
   .snap { scroll-snap-align: start; }
   .snapEnd { scroll-snap-align: end; }
-}
-@media (min-width: 1200px) and (prefers-reduced-motion: no-preference) {
-  :global(html):has(.page) { scroll-snap-type: y mandatory; }
 }
 
 .link {
@@ -451,8 +449,7 @@
   .kicker::before { width: 24px; }
   .kicker span { font-size: 12px; }
 
-  /* Header is taller on phones; keep the page-1 snap point at the very top so it stays visible. */
-  .about { min-height: 0; padding-top: 28px; padding-bottom: 36px; scroll-margin-top: 200px; }
+  .about { min-height: 0; padding-top: 28px; padding-bottom: 36px; }
   .aboutGrid { display: flex; flex-direction: column; gap: 18px; padding: 0; }
   .aboutP { font-size: 17px; }
   .links { font-size: 12px; }
