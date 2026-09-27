@@ -181,16 +181,12 @@ function Tabs({ reduced }) {
               className={s.tab}
               style={{ background: on ? 'var(--ink)' : 'var(--paper)', color: on ? 'var(--paper)' : 'var(--ink)' }}
             >
-              <span>{t.num}</span>
               <span>{t.name}</span>
             </button>
           );
         })}
       </div>
-      <div key={`q${sel}`} className={s.in2} style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-        <span className={s.qNum}>
-          {p.num} / {p.name.toUpperCase()}
-        </span>
+      <div key={`q${sel}`} className={s.in2}>
         <span className={s.qText}>{p.q}</span>
       </div>
       <div ref={areaRef} id="explore-tabpanel" role="tabpanel" aria-labelledby={`explore-tab-${sel}`}>
