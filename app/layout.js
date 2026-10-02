@@ -1,36 +1,38 @@
-import { Inter_Tight, Playfair_Display, Work_Sans, IBM_Plex_Mono } from 'next/font/google';
+import { Geist, Geist_Mono, Inter_Tight, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import SiteHeader from '@/components/home/SiteHeader';
 import { Analytics } from '@vercel/analytics/next';
 
-// Inter Tight is still used by the older /projects, /blog and /about pages.
+// Site typeface: Geist for everything, Geist Mono for labels, data and code.
+const geist = Geist({
+  subsets: ['latin'],
+  variable: '--font-geist',
+  display: 'swap',
+});
+
+const geistMono = Geist_Mono({
+  subsets: ['latin'],
+  variable: '--font-geist-mono',
+  display: 'swap',
+});
+
+// Legacy faces, still used by the older /projects, /blog and /about pages until they're
+// rebuilt. Not preloaded, so the homepage doesn't pay for them.
 const interTight = Inter_Tight({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700'],
   variable: '--font-inter-tight',
   display: 'swap',
+  preload: false,
 });
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '700'],
   style: ['normal', 'italic'],
   variable: '--font-playfair',
   display: 'swap',
-});
-
-const workSans = Work_Sans({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-work-sans',
-  display: 'swap',
-});
-
-const plexMono = IBM_Plex_Mono({
-  subsets: ['latin'],
-  weight: ['400', '500', '600'],
-  variable: '--font-plex-mono',
-  display: 'swap',
+  preload: false,
 });
 
 export const metadata = {
@@ -49,7 +51,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${interTight.variable} ${playfair.variable} ${workSans.variable} ${plexMono.variable}`}
+      className={`${geist.variable} ${geistMono.variable} ${interTight.variable} ${playfair.variable}`}
     >
       <body>
         <SiteHeader />

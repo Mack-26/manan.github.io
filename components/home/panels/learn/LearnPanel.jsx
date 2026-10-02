@@ -15,14 +15,14 @@ function Desktop({ v }) {
             <svg width="22" height="25" viewBox="-2 -2 44 49" aria-hidden="true" style={{ flexShrink: "0", filter: "drop-shadow(0 1px 1.5px rgba(28,28,28,0.18))" }}>
               <path d="M20,0 L40,6 L40,22 C40,34 31,41.5 20,45 C9,41.5 0,34 0,22 L0,6 Z" fill="#FEFEFE" />
               <path d="M20,4 L36,8.8 L36,22 C36,31.5 29,37.8 20,40.8 C11,37.8 4,31.5 4,22 L4,8.8 Z" fill="#C8372D" />
-              <text x="20" y="28" textAnchor="middle" fontSize="18" fontWeight="700" fill="#FEFEFE" style={{ fontFamily: "var(--serif)" }}>
+              <text x="20" y="28" textAnchor="middle" fontSize="18" fontWeight="700" fill="#FEFEFE" style={{ fontFamily: "var(--display)" }}>
                 RL
               </text>
             </svg>
             RL FC
           </span>
           <span style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "1px", minWidth: "60px" }}>
-            <span style={{ fontFamily: "var(--serif)", fontSize: "24px", lineHeight: "1" }}>
+            <span style={{ fontFamily: "var(--display)", fontSize: "24px", lineHeight: "1" }}>
               {v.s0} — {v.s1}
             </span>
             <span style={{ fontSize: "9px", color: "#555555", letterSpacing: "0.08em" }}>
@@ -34,7 +34,7 @@ function Desktop({ v }) {
             <svg width="22" height="25" viewBox="-2 -2 44 49" aria-hidden="true" style={{ flexShrink: "0", filter: "drop-shadow(0 1px 1.5px rgba(28,28,28,0.18))" }}>
               <path d="M20,0 L40,6 L40,22 C40,34 31,41.5 20,45 C9,41.5 0,34 0,22 L0,6 Z" fill="#FEFEFE" />
               <path d="M20,4 L36,8.8 L36,22 C36,31.5 29,37.8 20,40.8 C11,37.8 4,31.5 4,22 L4,8.8 Z" fill="#3F4A55" />
-              <text x="20" y="28" textAnchor="middle" fontSize="18" fontWeight="700" fill="#FEFEFE" style={{ fontFamily: "var(--serif)" }}>
+              <text x="20" y="28" textAnchor="middle" fontSize="18" fontWeight="700" fill="#FEFEFE" style={{ fontFamily: "var(--display)" }}>
                 BL
               </text>
             </svg>
@@ -217,10 +217,10 @@ function Desktop({ v }) {
                 <span style={{ fontFamily: "var(--mono)", fontSize: "9px", letterSpacing: "0.14em", color: v.sel.tc, fontWeight: "600" }}>
                   {v.sel.team}
                 </span>
-                <span style={{ fontFamily: "var(--serif)", fontWeight: "700", fontSize: "18px", lineHeight: "1.15", color: "#1C1C1C" }}>
+                <span style={{ fontFamily: "var(--display)", fontWeight: "700", fontSize: "18px", lineHeight: "1.15", color: "#1C1C1C" }}>
                   {v.sel.name}
                 </span>
-                <span style={{ fontFamily: "var(--serif)", fontStyle: "italic", fontSize: "14px", lineHeight: "1.3", color: "#4A4A4A" }}>
+                <span style={{ fontFamily: "var(--display)", fontSize: "14px", lineHeight: "1.3", color: "#4A4A4A" }}>
                   {v.sel.beh}
                 </span>
               </div>
@@ -240,13 +240,13 @@ function Desktop({ v }) {
         {v.showGoal && (
           <>
             <div style={{ position: "absolute", left: "0", top: "0", right: "0", bottom: "0", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "8px", background: "rgba(254, 254, 254, 0.72)", pointerEvents: "none" }}>
-              <span className="mm-up" style={{ fontFamily: "var(--serif)", fontWeight: "700", fontSize: "84px", lineHeight: "1", letterSpacing: "0.04em", color: "#1C1C1C" }}>
+              <span className="mm-up" style={{ fontFamily: "var(--display)", fontWeight: "700", fontSize: "84px", lineHeight: "1", letterSpacing: "0.04em", color: "#1C1C1C" }}>
                 {v.goalWord}
               </span>
               <span className="mm-up2" style={{ fontFamily: "var(--sans)", fontWeight: "700", fontSize: "12px", letterSpacing: "0.16em", textTransform: "uppercase", color: v.goalC }}>
                 {v.goalTeam}
               </span>
-              <span className="mm-up2" style={{ fontFamily: "var(--serif)", fontSize: "36px", color: "#1C1C1C" }}>
+              <span className="mm-up2" style={{ fontFamily: "var(--display)", fontSize: "36px", color: "#1C1C1C" }}>
                 {v.goalScore}
               </span>
               <span className="mm-up3" style={{ fontFamily: "var(--mono)", fontSize: "11px", color: "#555555" }}>
@@ -436,10 +436,10 @@ function Mobile({ v }) {
                 <span style={{ fontFamily: "var(--mono)", fontSize: "8px", letterSpacing: "0.14em", color: v.sel.tc, fontWeight: "600" }}>
                   {v.sel.team}
                 </span>
-                <span style={{ fontFamily: "var(--serif)", fontWeight: "700", fontSize: "15px", lineHeight: "1.15", color: "#1C1C1C" }}>
+                <span style={{ fontFamily: "var(--display)", fontWeight: "700", fontSize: "15px", lineHeight: "1.15", color: "#1C1C1C" }}>
                   {v.sel.name}
                 </span>
-                <span style={{ fontFamily: "var(--serif)", fontStyle: "italic", fontSize: "12px", lineHeight: "1.3", color: "#4A4A4A" }}>
+                <span style={{ fontFamily: "var(--display)", fontSize: "12px", lineHeight: "1.3", color: "#4A4A4A" }}>
                   {v.sel.beh}
                 </span>
               </div>
@@ -459,13 +459,13 @@ function Mobile({ v }) {
         {v.showGoal && (
           <>
             <div style={{ position: "absolute", left: "0", top: "0", right: "0", bottom: "0", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "4px", background: "rgba(254, 254, 254, 0.72)", pointerEvents: "none" }}>
-              <span className="mm-up" style={{ fontFamily: "var(--serif)", fontWeight: "700", fontSize: "40px", lineHeight: "1", letterSpacing: "0.04em", color: "#1C1C1C" }}>
+              <span className="mm-up" style={{ fontFamily: "var(--display)", fontWeight: "700", fontSize: "40px", lineHeight: "1", letterSpacing: "0.04em", color: "#1C1C1C" }}>
                 {v.goalWord}
               </span>
               <span className="mm-up2" style={{ fontFamily: "var(--sans)", fontWeight: "700", fontSize: "10px", letterSpacing: "0.16em", textTransform: "uppercase", color: v.goalC }}>
                 {v.goalTeam}
               </span>
-              <span className="mm-up2" style={{ fontFamily: "var(--serif)", fontSize: "22px", color: "#1C1C1C" }}>
+              <span className="mm-up2" style={{ fontFamily: "var(--display)", fontSize: "22px", color: "#1C1C1C" }}>
                 {v.goalScore}
               </span>
               <span className="mm-up3" style={{ fontFamily: "var(--mono)", fontSize: "10px", color: "#555555" }}>
@@ -494,14 +494,14 @@ function Mobile({ v }) {
               <svg width="20" height="22" viewBox="-2 -2 44 49" aria-hidden="true" style={{ flexShrink: "0", filter: "drop-shadow(0 1px 1.5px rgba(28,28,28,0.18))" }}>
                 <path d="M20,0 L40,6 L40,22 C40,34 31,41.5 20,45 C9,41.5 0,34 0,22 L0,6 Z" fill="#FEFEFE" />
                 <path d="M20,4 L36,8.8 L36,22 C36,31.5 29,37.8 20,40.8 C11,37.8 4,31.5 4,22 L4,8.8 Z" fill="#C8372D" />
-                <text x="20" y="28" textAnchor="middle" fontSize="18" fontWeight="700" fill="#FEFEFE" style={{ fontFamily: "var(--serif)" }}>
+                <text x="20" y="28" textAnchor="middle" fontSize="18" fontWeight="700" fill="#FEFEFE" style={{ fontFamily: "var(--display)" }}>
                   RL
                 </text>
               </svg>
               RL FC
             </span>
             <span style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "1px", minWidth: "52px" }}>
-              <span style={{ fontFamily: "var(--serif)", fontSize: "20px", lineHeight: "1" }}>
+              <span style={{ fontFamily: "var(--display)", fontSize: "20px", lineHeight: "1" }}>
                 {v.s0} — {v.s1}
               </span>
               <span style={{ fontSize: "9px", color: "#555555", letterSpacing: "0.08em" }}>
@@ -513,7 +513,7 @@ function Mobile({ v }) {
               <svg width="20" height="22" viewBox="-2 -2 44 49" aria-hidden="true" style={{ flexShrink: "0", filter: "drop-shadow(0 1px 1.5px rgba(28,28,28,0.18))" }}>
                 <path d="M20,0 L40,6 L40,22 C40,34 31,41.5 20,45 C9,41.5 0,34 0,22 L0,6 Z" fill="#FEFEFE" />
                 <path d="M20,4 L36,8.8 L36,22 C36,31.5 29,37.8 20,40.8 C11,37.8 4,31.5 4,22 L4,8.8 Z" fill="#3F4A55" />
-                <text x="20" y="28" textAnchor="middle" fontSize="18" fontWeight="700" fill="#FEFEFE" style={{ fontFamily: "var(--serif)" }}>
+                <text x="20" y="28" textAnchor="middle" fontSize="18" fontWeight="700" fill="#FEFEFE" style={{ fontFamily: "var(--display)" }}>
                   BL
                 </text>
               </svg>

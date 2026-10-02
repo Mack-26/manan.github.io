@@ -32,9 +32,9 @@
   --ink-2:       #4A4A4A;
   --muted:       #555555;
   --hairline:    #CCCCCC;
-  --serif: var(--font-playfair), Georgia, serif;
-  --sans:  var(--font-work-sans), system-ui, sans-serif;
-  --mono:  var(--font-plex-mono), ui-monospace, monospace;
+  --display: var(--font-geist), system-ui, sans-serif;
+  --sans:    var(--font-geist), system-ui, sans-serif;
+  --mono:    var(--font-geist-mono), ui-monospace, monospace;
 }
 
 /* ── Reset ───────────────────────────────────── */

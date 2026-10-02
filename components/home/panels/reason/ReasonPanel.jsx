@@ -180,7 +180,7 @@ function Desktop({ v }) {
                     {v.stageTxt}
                   </span>
                 </div>
-                <p style={{ margin: "0", fontFamily: "var(--serif)", fontSize: "27px", lineHeight: "1.45", color: "#1C1C1C" }}>
+                <p style={{ margin: "0", fontFamily: "var(--display)", fontSize: "27px", lineHeight: "1.45", color: "#1C1C1C" }}>
                   {v.sent.map((w, w_i) => (
                     <Fragment key={w_i}>
                       <span>

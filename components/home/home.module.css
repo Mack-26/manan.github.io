@@ -86,16 +86,16 @@
 }
 .h2 {
   margin: 0;
-  font-family: var(--serif);
-  font-weight: 700;
+  font-family: var(--display);
+  font-weight: 600;
   font-size: 50px;
   line-height: 1.04;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.035em;
 }
 .sub {
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: 22px;
+  font-family: var(--display);
+  font-size: 20px;
+  letter-spacing: -0.01em;
   color: var(--ink-2);
 }
 
@@ -141,8 +141,8 @@
 .aboutP {
   margin: 0;
   max-width: 620px;
-  font-size: 21px;
-  line-height: 1.6;
+  font-size: 19px;
+  line-height: 1.65;
 }
 .links {
   display: flex;
@@ -241,10 +241,11 @@
   color: var(--olive);
 }
 .qText {
-  font-family: var(--serif);
+  font-family: var(--display);
   font-weight: 600;
   font-size: 26px;
   line-height: 1.2;
+  letter-spacing: -0.02em;
 }
 
 .cards {
@@ -294,10 +295,11 @@
   font-size: 22px;
 }
 .cQ {
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: 26px;
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 24px;
   line-height: 1.2;
+  letter-spacing: -0.02em;
 }
 .cMeta {
   display: flex;
@@ -408,10 +410,11 @@
   gap: 32px;
 }
 .talk {
-  font-family: var(--serif);
-  font-weight: 700;
+  font-family: var(--display);
+  font-weight: 600;
   font-size: 40px;
   line-height: 1.05;
+  letter-spacing: -0.03em;
 }
 .talkSub { font-size: 17px; color: var(--ink-2); }
 .footerLinks {
@@ -432,7 +435,7 @@
 @media (max-width: 1099px) {
   .aboutGrid > :not(figure) { grid-column: 1 / span 7; }
   .photo { grid-column: 8 / span 5; }
-  .aboutP { font-size: 19px; }
+  .aboutP { font-size: 18px; }
   .h2 { font-size: 42px; }
   .sub { font-size: 20px; }
 }
@@ -451,7 +454,7 @@
 
   .about { min-height: 0; padding-top: 28px; padding-bottom: 36px; }
   .aboutGrid { display: flex; flex-direction: column; gap: 18px; padding: 0; }
-  .aboutP { font-size: 17px; }
+  .aboutP { font-size: 17px; line-height: 1.6; }
   .links { font-size: 12px; }
   .photo { max-width: none; }
   /* Phone portrait photo; never taller than ~60% of the screen. */

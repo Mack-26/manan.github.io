@@ -23,9 +23,10 @@
   margin-top: 6px;
 }
 .org {
-  font-family: var(--serif);
+  font-family: var(--display);
   font-weight: 600;
   line-height: 1.2;
+  letter-spacing: -0.015em;
   transition: color 240ms ease;
 }
 .role { font-size: 13px; line-height: 1.4; color: var(--ink-2); }
@@ -48,8 +49,7 @@
   line-height: 1.5;
 }
 .futureText {
-  font-family: var(--serif);
-  font-style: italic;
+  font-family: var(--display);
   font-size: 16px;
   line-height: 1.35;
   color: var(--ink-2);
