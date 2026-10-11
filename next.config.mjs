@@ -8,6 +8,10 @@ const nextConfig = {
   turbopack: {
     root: __dirname,
   },
+  // LearnPool was renamed Horizon; keep links already shared working.
+  async redirects() {
+    return [{ source: '/projects/learnpool', destination: '/projects/horizon', permanent: true }];
+  },
 };
 
 export default nextConfig;

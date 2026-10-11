@@ -1,0 +1,37 @@
+.demo {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: clamp(16px, 3vw, 32px);
+  align-items: start;
+}
+@media (max-width: 760px) { .demo { grid-template-columns: 1fr; } }
+
+.stage { position: relative; border-radius: 10px; overflow: hidden; background: #000; aspect-ratio: 1; }
+.stage img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.overlay { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+
+.panel { display: flex; flex-direction: column; gap: 1rem; }
+.filters { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.kicker { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.query { font-size: 1.1rem; line-height: 1.5; color: var(--ink); min-height: 4.5em; }
+.query::before { content: '“'; color: var(--muted); }
+.query::after { content: '”'; color: var(--muted); }
+
+.picks { display: flex; flex-direction: column; border-top: 1px solid var(--hairline); }
+.pick { display: grid; grid-template-columns: auto 1fr auto; gap: 0.75rem; align-items: center; padding: 0.75rem 0; border-bottom: 1px solid var(--hairline); }
+.badge { font-family: var(--mono); font-size: 0.72rem; font-weight: 600; padding: 0.2rem 0.5rem; border-radius: 4px; color: var(--paper); }
+.badge[data-model='4b'] { background: var(--olive); }
+.badge[data-model='2b'] { background: var(--ink-2); }
+.pickText { font-size: 0.9rem; color: var(--ink-2); }
+.pickText small { display: block; font-size: 0.75rem; color: var(--muted); }
+.verdict { font-family: var(--mono); font-size: 0.78rem; font-weight: 600; }
+.verdict[data-ok='true'] { color: var(--olive); }
+.verdict[data-ok='false'] { color: #A0473A; }
+
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.count { font-family: var(--mono); font-size: 0.78rem; color: var(--muted); }
+
+.failGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
+.failCard img { width: 100%; border-radius: 8px; background: #000; aspect-ratio: 1; object-fit: contain; }
+.failCard p { font-size: 0.92rem; line-height: 1.55; color: var(--ink-2); margin-top: 0.75rem; }
+.failCard .mono { font-family: var(--mono); font-size: 0.75rem; color: var(--muted); }

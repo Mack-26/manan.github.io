@@ -1,5 +1,6 @@
 import { projects } from '@/data/projects';
 import Link from 'next/link';
+import FeaturedCard, { FeaturedGrid } from '@/components/projects/FeaturedCard';
 
 export const metadata = {
   title: 'Projects | Manan Arora',
@@ -18,7 +19,7 @@ export default function ProjectsPage() {
     >
       <div
         style={{
-          maxWidth: '860px',
+          maxWidth: '1080px',
           margin: '0 auto',
           padding: '0 clamp(1.5rem, 4vw, 3.5rem)',
         }}
@@ -50,16 +51,22 @@ export default function ProjectsPage() {
               lineHeight: 1.7,
             }}
           >
-            Building AI systems and publishing research across ML, sustainability, and data infrastructure.
+            Things I’ve built and researched, written up with the demos, diagrams and numbers behind them.
           </p>
         </div>
 
-        {/* Project list */}
-        <div>
-          {/* Top rule */}
-          <div style={{ borderTop: '1px solid var(--border)', marginBottom: 0 }} />
+        <FeaturedGrid>
+          {projects.filter((p) => p.featured).map((project) => (
+            <FeaturedCard key={project.slug} project={project} />
+          ))}
+        </FeaturedGrid>
 
-          {projects.map((project) => (
+        {/* More work */}
+        <div style={{ marginTop: '5rem', maxWidth: '860px' }}>
+          <span className="section-label">More work</span>
+          <div style={{ borderTop: '1px solid var(--border)', marginTop: '1rem' }} />
+
+          {projects.filter((p) => !p.featured).map((project) => (
             <ProjectRow key={project.slug} project={project} />
           ))}
         </div>

@@ -1,0 +1,15 @@
+{
+  "source": "Search-space numbers: pipeline25/SUBSET_SEARCH_EXPLAINED.md. Everything marked placeholder is an invented stand-in, to be replaced with measured results.",
+  "search": { "samples": 9650, "segments": 53, "minK": 2, "maxK": 13, "maxFraction": 0.25 },
+  "headline": { "value": "3.9%", "label": "lifetime error (MAPE) on held-out batteries, training on 25% of the data", "placeholder": true },
+  "mapeVsFraction": { "placeholder": true, "points": [[10, 7.2], [25, 3.9], [50, 3.4], [100, 3.1]] },
+  "models": {
+    "placeholder": true,
+    "rows": [
+      { "label": "Physics-guided NN", "value": 3.6 },
+      { "label": "CatBoost", "value": 3.9 },
+      { "label": "XGBoost", "value": 4.4 },
+      { "label": "MLP (no physics features)", "value": 5.6 }
+    ]
+  }
+}

@@ -1,0 +1,245 @@
+{
+  "source": "567_share/eval_results/aggregate.csv",
+  "rows": [
+    {
+      "task": "multiwalker",
+      "algo": "adaptive_mappo",
+      "rank": 1,
+      "dropPct": 21.2,
+      "stabilityGap": 2.6429,
+      "best": 12.476,
+      "last": 9.8331,
+      "lastAlpha": 0.9442
+    },
+    {
+      "task": "multiwalker",
+      "algo": "mappo",
+      "rank": 2,
+      "dropPct": 49.4,
+      "stabilityGap": 2.9546,
+      "best": 5.9815,
+      "last": 3.0269,
+      "lastAlpha": 1
+    },
+    {
+      "task": "multiwalker",
+      "algo": "fixed_alpha_mappo_0.25",
+      "rank": 3,
+      "dropPct": 53.3,
+      "stabilityGap": 18.2143,
+      "best": 34.1943,
+      "last": 15.98,
+      "lastAlpha": 0.25
+    },
+    {
+      "task": "multiwalker",
+      "algo": "fixed_alpha_mappo_0.75",
+      "rank": 4,
+      "dropPct": 78.4,
+      "stabilityGap": 19.0751,
+      "best": 24.3428,
+      "last": 5.2677,
+      "lastAlpha": 0.75
+    },
+    {
+      "task": "multiwalker",
+      "algo": "fixed_alpha_mappo_0.50",
+      "rank": 5,
+      "dropPct": 110.2,
+      "stabilityGap": 18.1635,
+      "best": 16.4788,
+      "last": -1.6848,
+      "lastAlpha": 0.5
+    },
+    {
+      "task": "multiwalker",
+      "algo": "ippo",
+      "rank": 6,
+      "dropPct": 141.3,
+      "stabilityGap": 13.7596,
+      "best": 9.7372,
+      "last": -4.0224,
+      "lastAlpha": 0
+    },
+    {
+      "task": "simple_world_comm",
+      "algo": "fixed_alpha_mappo_0.25",
+      "rank": 1,
+      "dropPct": 2.6,
+      "stabilityGap": 1.0633,
+      "best": 41.1337,
+      "last": 40.0704,
+      "lastAlpha": 0.25
+    },
+    {
+      "task": "simple_world_comm",
+      "algo": "ippo",
+      "rank": 2,
+      "dropPct": 16.4,
+      "stabilityGap": 6.2936,
+      "best": 38.376,
+      "last": 32.0824,
+      "lastAlpha": 0
+    },
+    {
+      "task": "simple_world_comm",
+      "algo": "mappo",
+      "rank": 3,
+      "dropPct": 24.5,
+      "stabilityGap": 9.7647,
+      "best": 39.9242,
+      "last": 30.1595,
+      "lastAlpha": 1
+    },
+    {
+      "task": "simple_world_comm",
+      "algo": "fixed_alpha_mappo_0.75",
+      "rank": 4,
+      "dropPct": 33.3,
+      "stabilityGap": 12.7105,
+      "best": 38.1267,
+      "last": 25.4162,
+      "lastAlpha": 0.75
+    },
+    {
+      "task": "simple_world_comm",
+      "algo": "fixed_alpha_mappo_0.50",
+      "rank": 5,
+      "dropPct": 35.3,
+      "stabilityGap": 14.0855,
+      "best": 39.9052,
+      "last": 25.8197,
+      "lastAlpha": 0.5
+    },
+    {
+      "task": "simple_world_comm",
+      "algo": "adaptive_mappo",
+      "rank": 6,
+      "dropPct": 43,
+      "stabilityGap": 13.2019,
+      "best": 30.6816,
+      "last": 17.4797,
+      "lastAlpha": 0.3711
+    },
+    {
+      "task": "balance",
+      "algo": "fixed_alpha_mappo_0.25",
+      "rank": 1,
+      "dropPct": 13.9,
+      "stabilityGap": 7.6789,
+      "best": 55.3879,
+      "last": 47.709,
+      "lastAlpha": 0.25
+    },
+    {
+      "task": "balance",
+      "algo": "mappo",
+      "rank": 2,
+      "dropPct": 16.1,
+      "stabilityGap": 8.6908,
+      "best": 54.0616,
+      "last": 45.3708,
+      "lastAlpha": 1
+    },
+    {
+      "task": "balance",
+      "algo": "adaptive_mappo",
+      "rank": 3,
+      "dropPct": 17.2,
+      "stabilityGap": 9.2867,
+      "best": 53.8471,
+      "last": 44.5604,
+      "lastAlpha": 1
+    },
+    {
+      "task": "balance",
+      "algo": "ippo",
+      "rank": 4,
+      "dropPct": 25.8,
+      "stabilityGap": 13.4294,
+      "best": 52.0823,
+      "last": 38.6528,
+      "lastAlpha": 0
+    },
+    {
+      "task": "balance",
+      "algo": "fixed_alpha_mappo_0.75",
+      "rank": 5,
+      "dropPct": 27.1,
+      "stabilityGap": 14.5533,
+      "best": 53.6121,
+      "last": 39.0587,
+      "lastAlpha": 0.75
+    },
+    {
+      "task": "balance",
+      "algo": "fixed_alpha_mappo_0.50",
+      "rank": 6,
+      "dropPct": 27.3,
+      "stabilityGap": 14.9718,
+      "best": 54.7826,
+      "last": 39.8108,
+      "lastAlpha": 0.5
+    },
+    {
+      "task": "navigation",
+      "algo": "adaptive_mappo",
+      "rank": 1,
+      "dropPct": 15.2,
+      "stabilityGap": 0.1705,
+      "best": 1.1247,
+      "last": 0.9542,
+      "lastAlpha": 0.2403
+    },
+    {
+      "task": "navigation",
+      "algo": "fixed_alpha_mappo_0.50",
+      "rank": 2,
+      "dropPct": 16.5,
+      "stabilityGap": 0.1852,
+      "best": 1.1204,
+      "last": 0.9352,
+      "lastAlpha": 0.5
+    },
+    {
+      "task": "navigation",
+      "algo": "mappo",
+      "rank": 3,
+      "dropPct": 16.8,
+      "stabilityGap": 0.1967,
+      "best": 1.17,
+      "last": 0.9734,
+      "lastAlpha": 1
+    },
+    {
+      "task": "navigation",
+      "algo": "fixed_alpha_mappo_0.75",
+      "rank": 4,
+      "dropPct": 17,
+      "stabilityGap": 0.1978,
+      "best": 1.1602,
+      "last": 0.9624,
+      "lastAlpha": 0.75
+    },
+    {
+      "task": "navigation",
+      "algo": "fixed_alpha_mappo_0.25",
+      "rank": 5,
+      "dropPct": 20.3,
+      "stabilityGap": 0.2294,
+      "best": 1.1296,
+      "last": 0.9002,
+      "lastAlpha": 0.25
+    },
+    {
+      "task": "navigation",
+      "algo": "ippo",
+      "rank": 6,
+      "dropPct": 23.7,
+      "stabilityGap": 0.2709,
+      "best": 1.1413,
+      "last": 0.8704,
+      "lastAlpha": 0
+    }
+  ]
+}

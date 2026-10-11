@@ -1,54 +1,78 @@
 export const projects = [
   {
-    slug: 'learnpool',
-    title: 'LearnPool',
-    type: 'Project',
-    meta: 'Ross AI Hackathon · 2026',
+    slug: 'lilseeground',
+    featured: true,
+    title: 'LilSeeGround',
+    type: 'Research',
+    meta: 'University of Michigan · 2026',
     summary:
-      'A shared, course-aware AI workspace that replaces isolated ChatGPT usage with a collaborative Q&A platform. Professors get live visibility into what students are struggling with.',
-    tags: ['AI', 'EdTech', 'RAG', 'Next.js', 'Hackathon Winner'],
-    problem:
-      'Generative AI has quietly fragmented the classroom: students query ChatGPT independently, each session is private, and every answer is untethered from actual course material. Professors are left flying blind with no visibility into which concepts are causing confusion, no signal to adapt lectures, and no way to intervene before an exam. The bottleneck is structural: existing AI tools are built for individuals, not cohorts. The objective was to replace isolated AI usage with a shared, course-grounded workspace that creates a continuous feedback loop between students and instructors. Built in 24 hours at the University of Michigan Ross Business+Tech AI Hackathon.',
-    solution:
-      'Built LearnPool as a full-stack Next.js application with a RAG pipeline. Professors upload course materials (syllabi, lecture notes, PDFs), which are chunked and indexed into a vector store; every student query is routed through retrieval before reaching the LLM, ensuring answers stay grounded in the actual course rather than generic knowledge. All Q&A flows into a shared, upvotable feed so the most common confusions surface naturally. A live professor dashboard aggregates trending questions, flags misconceptions by topic, and lets instructors mark issues as addressed, completing the feedback loop. The hardest engineering challenge was maintaining retrieval accuracy across heterogeneous document formats (PDFs, slides, scanned notes) under hackathon time pressure. I solved this with a format-aware chunking strategy that preserved semantic context. LearnPool earned an honourable mention at the hackathon.',
-    links: [
-      { label: 'GitHub', href: 'https://github.com/Mack-26/learnpool', external: true },
-    ],
-    artifact: { type: 'image', src: '/artifacts/learnpool-architecture.png', alt: 'LearnPool system architecture diagram', darkBg: true },
-    htmlArtifact: { src: '/artifacts/learnpool-before-after.html', title: 'Problem vs Solution' },
+      'Can a 4B vision-language model do 3D visual grounding as well as a 72B one? Swapping SeeGround’s backbone for Qwen3-VL: the 4B model beats the 72B baseline on Nr3D at 18× fewer parameters.',
+    tags: ['VLMs', '3D Grounding', 'Edge AI', 'Qwen3-VL'],
+    card: {
+      hook: 'A 4B vision-language model beats a 72B one at finding objects in 3D scenes, small enough for a Jetson.',
+      metric: { value: '47.2 vs 44.1', label: 'Acc@25 on Nr3D, 4B vs 72B' },
+      thumb: '/projects/lilseeground/thumb.jpg',
+    },
   },
-  // {
-  //   slug: 'battery-ml',
-  //   title: 'ML for Second-Life EV Batteries',
-  //   type: 'Research',
-  //   meta: 'Ziyou Song Lab, UMich · 2025 – Present',
-  //   summary:
-  //     'Modeling degradation mechanisms and predicting remaining useful life of EV batteries using electrochemical impedance spectroscopy data.',
-  //   tags: ['Battery ML', 'EIS Analysis', 'PyTorch', 'Sustainability'],
-  //   problem:
-  //     'The global EV transition is producing millions of lithium-ion packs that will reach end-of-vehicle-life within the decade. Repurposing them for second-life stationary storage is economically and environmentally critical, but, hinges on accurately assessing each pack\'s remaining useful life. The challenge is that degradation is driven by multiple concurrent electrochemical mechanisms (SEI growth, lithium plating, particle cracking) that interact non-linearly over thousands of cycles. Purely data-driven models fail to generalize across chemistries and operating conditions because they capture statistical correlations, not the underlying physics. The objective is to develop physics-informed ML models that embed electrochemical knowledge directly into the learning process, enabling accurate and interpretable degradation prediction from impedance data.',
-  //   solution:
-  //     'Working with Prof. Ziyou Song at UMich to design a physics-informed ML pipeline for EIS-based state-of-health prediction. Electrochemical Impedance Spectroscopy measurements encode a battery\'s internal state as a frequency-domain impedance spectrum; equivalent circuit models (ECMs) are first fit to extract physically meaningful parameters  -  charge transfer resistance, double-layer capacitance, diffusion coefficients  -  which are then combined with raw spectral features as inputs to PyTorch neural networks. This hybrid representation lets the model learn residual degradation patterns that the physics cannot fully account for, while remaining interpretable. PyTorch was chosen for its flexibility in defining custom loss terms that penalize physically inconsistent predictions, a capability that is far more ergonomic than TensorFlow for research-stage work. The central challenge has been handling distribution shift across different chemistries and operating temperatures  -  an ongoing effort involving domain adaptation techniques and targeted data collection. Research is active and results are being prepared for publication.',
-  //   links: [],
-  //   artifact: null,
-  // },
+  {
+    slug: 'adaptive-mappo',
+    featured: true,
+    title: 'Adaptive MAPPO',
+    type: 'Research',
+    meta: 'Multi-agent RL · 2026',
+    summary:
+      'A learned α that blends a centralized critic with local critics in multi-agent PPO, so each task finds its own mix. Most stable method on multiwalker and navigation across 72 runs.',
+    tags: ['Reinforcement Learning', 'Multi-agent', 'PPO', 'TorchRL'],
+    card: {
+      hook: 'Letting multi-agent PPO learn how much to trust the team’s critic versus each agent’s own.',
+      metric: { value: '21% vs 49%', label: 'drop from peak reward on multiwalker, adaptive vs MAPPO' },
+      thumb: '/projects/adaptive-mappo/thumb.jpg',
+    },
+  },
+  {
+    slug: 'horizon',
+    featured: true,
+    title: 'Horizon',
+    type: 'Product',
+    meta: 'Founder · 2026',
+    summary:
+      'A shared, course-grounded AI workspace: students ask questions answered from their own course materials with citations, classmates verify answers, and TAs see where the class is confused.',
+    tags: ['RAG', 'pgvector', 'FastAPI', 'React'],
+    card: {
+      hook: 'Course Q&A answered from the course itself, with citations, peer verification and a TA dashboard.',
+      metric: { value: '94%', label: 'answer sentences grounded in a cited source', placeholder: true },
+      thumb: '/projects/horizon/thumb.jpg',
+    },
+  },
   {
     slug: 'hrms',
-    title: 'Field HRMS Mobile App',
-    type: 'Project',
-    meta: 'Founder · 2022–2024',
+    featured: true,
+    title: 'Field HRMS',
+    type: 'Product',
+    meta: 'Founder & Lead Developer · 2024',
     summary:
-      'Founded a field workforce management startup from scratch. Recruited the team, closed enterprise contracts, and shipped a product adopted by 500+ employees. Acquired by a leading defence manufacturing firm.',
-    tags: ['Founder', 'React Native', 'iOS', 'Android', 'Geofencing', 'Acquired'],
-    problem:
-      'Large field-deployed workforces across construction sites, manufacturing yards, and logistics networks were still managing attendance and compliance through spreadsheets and phone calls. The gap wasn\'t just operational inefficiency; it was a genuine liability. Without verifiable location data and audit trails, companies faced payroll fraud, labour law exposure, and zero real-time visibility into where their people were. Existing enterprise HRMS platforms were built for desk workers: expensive, desktop-heavy, and completely unequipped for intermittent connectivity and distributed field environments. The objective was to build a mobile-first HRMS from the ground up, then sell, deploy, and scale it as a business.',
-    solution:
-      'Recruited and led a team of 4 engineers, defined the product roadmap, and closed the first enterprise contracts before a line of production code was written. Built a cross-platform mobile app in React Native targeting iOS and Android from a single codebase, with geofenced clock-in/out (employees could only mark attendance within GPS-verified radii of their site), biometric authentication to eliminate proxy attendance, real-time manager dashboards, compliance alert push notifications, and automated payroll-ready exports. I handled everything from architecture decisions and sprint planning to customer calls and contract negotiations. The hardest engineering problem was geofence reliability in dense environments where GPS drift caused false rejections. I solved this with a hybrid positioning algorithm that weighted cell-tower and Wi-Fi signals as fallbacks. The harder business problem was earning trust from enterprise procurement teams as a first-time founder. I addressed this by leading with a focused pilot, maintaining tight feedback loops, and delivering measurable outcomes. The product reduced manual attendance overhead by 80%, scaled to 500+ active field employees, and was ultimately acquired by a leading company in the defence manufacturing industry.',
-    links: [
-      { label: 'Case Study (PDF)', href: '/artifacts/hrms-casestudy.pdf', external: false },
-      { label: 'GitHub', href: 'https://github.com/Mack-26/hrms-app', external: true },
-    ],
-    artifact: null,
+      'A mobile-first HR app for remote and on-site staff: selfie attendance with location, leave, travel and expenses. Led a team of four from stakeholder interviews to deployment for 1000+ employees.',
+    tags: ['Flutter', 'Product', 'Clean Architecture', 'Mobile'],
+    card: {
+      hook: 'Turning a desktop-only HR system into a mobile app field staff actually use.',
+      metric: { value: '1000+', label: 'employees using it' },
+      thumb: '/projects/hrms/thumb.jpg',
+    },
+  },
+  {
+    slug: 'battery-lifetime',
+    featured: true,
+    title: 'Battery Lifetime Prediction',
+    type: 'ML Engineering',
+    meta: 'Physics-guided ML · 2025',
+    summary:
+      'Predicting second-life battery lifetime from usage profiles and physical degradation modes, while training on a quarter of the data via Optuna subset search and surrogate augmentation.',
+    tags: ['Physics-guided ML', 'CatBoost', 'Optuna', 'Batteries'],
+    card: {
+      hook: 'Accurate battery lifetime predictions from a quarter of the expensive aging data.',
+      metric: { value: '3.9%', label: 'lifetime error (MAPE) using 25% of data', placeholder: true },
+      thumb: '/projects/battery-lifetime/thumb.jpg',
+    },
   },
   {
     slug: 'smart-investigator',

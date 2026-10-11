@@ -1,0 +1,35 @@
+{
+  "source": "PLACEHOLDERS: invented stand-in values, to be replaced with measured numbers",
+  "metrics": [
+    {
+      "value": "0.91",
+      "label": "retrieval hit@5",
+      "how": "to be measured: share of held-out course questions whose answer passage is in the top 5 retrieved chunks",
+      "placeholder": true
+    },
+    {
+      "value": "94%",
+      "label": "answer sentences grounded in a cited source",
+      "how": "to be measured: LLM-judge check of each sentence against the chunks it cites",
+      "placeholder": true
+    },
+    {
+      "value": "1.8 s",
+      "label": "median time to answer (p95: 3.6 s)",
+      "how": "to be measured: question submitted to answer shown",
+      "placeholder": true
+    },
+    {
+      "value": "38%",
+      "label": "answers with a peer verification vote",
+      "how": "to be measured: the health metric: are classmates checking the AI?",
+      "placeholder": true
+    },
+    {
+      "value": "2.4",
+      "label": "questions per student per session",
+      "how": "to be measured: across active study groups over a term",
+      "placeholder": true
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "source": "LilSeeGround/README.md results table (Nr3D); † rows from the SeeGround paper",
+  "rows": [
+    { "model": "Qwen2-VL-7B", "params": 7, "vram": 14, "acc25": 33.3, "prior": true },
+    { "model": "InternVL2-8B", "params": 8, "vram": 16, "acc25": 34.3, "prior": true },
+    { "model": "InternVL2-26B", "params": 26, "vram": 52, "acc25": 38.0, "prior": true },
+    { "model": "Qwen2-VL-72B", "params": 72, "vram": 144, "u25": 75.7, "u50": 68.9, "m25": 34.0, "m50": 30.0, "acc25": 44.1, "acc50": 39.4, "prior": true },
+    { "model": "Qwen3-VL-2B", "params": 2, "vram": 4, "u25": 73.03, "u50": 68.54, "m25": 32.07, "m50": 29.22, "acc25": 42.41, "acc50": 39.15 },
+    { "model": "Qwen3-VL-4B", "params": 4, "vram": 8, "u25": 74.16, "u50": 67.98, "m25": 38.14, "m50": 34.35, "acc25": 47.23, "acc50": 42.84 }
+  ]
+}

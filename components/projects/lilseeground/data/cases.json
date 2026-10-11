@@ -1,0 +1,167 @@
+{
+  "source": "LilSeeGround/examples.csv + seeground_comparison/ (ScanRefer val)",
+  "cases": [
+    {
+      "id": "scene0015_00_q4",
+      "scene": "scene0015_00",
+      "outcome": "4b_wins",
+      "query": "there is a beige wooden desk. placed on the side of the wall.",
+      "pred4b": 28,
+      "pred2b": 34,
+      "iou4b": 0.998,
+      "iou2b": 0,
+      "pos4b": {
+        "x": 0.713,
+        "y": 0.081
+      },
+      "pos2b": {
+        "x": 0.213,
+        "y": 0.324
+      },
+      "img": "/projects/lilseeground/cases/scene0015_00_q4.jpg"
+    },
+    {
+      "id": "scene0086_00_q0",
+      "scene": "scene0086_00",
+      "outcome": "4b_wins",
+      "query": "this is an average looking white toilet like what you would find in an office building or store. it is round and below the rail in the stall.",
+      "pred4b": 8,
+      "pred2b": 6,
+      "iou4b": 1,
+      "iou2b": 0,
+      "pos4b": {
+        "x": 0.724,
+        "y": 0.294
+      },
+      "pos2b": {
+        "x": 0.628,
+        "y": 0.562
+      },
+      "img": "/projects/lilseeground/cases/scene0086_00_q0.jpg"
+    },
+    {
+      "id": "scene0025_00_q3",
+      "scene": "scene0025_00",
+      "outcome": "4b_wins",
+      "query": "the keyboard is sitting on top of the desk. it is in front of the left-side monitor.",
+      "pred4b": 62,
+      "pred2b": 5,
+      "iou4b": 1,
+      "iou2b": 0,
+      "pos4b": {
+        "x": 0.559,
+        "y": 0.515
+      },
+      "pos2b": {
+        "x": 0.465,
+        "y": 0.515
+      },
+      "img": "/projects/lilseeground/cases/scene0025_00_q3.jpg"
+    },
+    {
+      "id": "scene0081_00_q1",
+      "scene": "scene0081_00",
+      "outcome": "4b_wins",
+      "query": "a small red chair. it's shape is square, and it is next to a long blue couch.",
+      "pred4b": 4,
+      "pred2b": 5,
+      "iou4b": 1,
+      "iou2b": 0,
+      "pos4b": {
+        "x": 0.178,
+        "y": 0.544
+      },
+      "pos2b": null,
+      "img": "/projects/lilseeground/cases/scene0081_00_q1.jpg"
+    },
+    {
+      "id": "scene0050_00_q1",
+      "scene": "scene0050_00",
+      "outcome": "4b_wins",
+      "query": "this is a brown ottoman in front of a brown sofa. the ottoman has a black back pack,and a black duffel bag,and a box of tissues.",
+      "pred4b": 30,
+      "pred2b": 31,
+      "iou4b": 1,
+      "iou2b": 0,
+      "pos4b": {
+        "x": 0.554,
+        "y": 0.666
+      },
+      "pos2b": null,
+      "img": "/projects/lilseeground/cases/scene0050_00_q1.jpg"
+    },
+    {
+      "id": "scene0077_00_q0",
+      "scene": "scene0077_00",
+      "outcome": "2b_wins",
+      "query": "a brown door. an open door.",
+      "pred4b": 1,
+      "pred2b": 7,
+      "iou4b": 0,
+      "iou2b": 1,
+      "pos4b": {
+        "x": 0.475,
+        "y": 0.424
+      },
+      "pos2b": {
+        "x": 0.371,
+        "y": 0.424
+      },
+      "img": "/projects/lilseeground/cases/scene0077_00_q0.jpg"
+    },
+    {
+      "id": "scene0084_00_q0",
+      "scene": "scene0084_00",
+      "outcome": "2b_wins",
+      "query": "this is a round trash can. it is under the counter top.",
+      "pred4b": 18,
+      "pred2b": 11,
+      "iou4b": 0,
+      "iou2b": 1,
+      "pos4b": {
+        "x": 0.537,
+        "y": 0.581
+      },
+      "pos2b": {
+        "x": 0.484,
+        "y": 0.501
+      },
+      "img": "/projects/lilseeground/cases/scene0084_00_q0.jpg"
+    },
+    {
+      "id": "scene0063_00_q1",
+      "scene": "scene0063_00",
+      "outcome": "2b_wins",
+      "query": "a modern light wood color table placed against the wall. it is to the left of the tv on the wall.",
+      "pred4b": 37,
+      "pred2b": 1,
+      "iou4b": 0.073,
+      "iou2b": 0.982,
+      "pos4b": {
+        "x": 0.394,
+        "y": 0.537
+      },
+      "pos2b": {
+        "x": 0.401,
+        "y": 0.563
+      },
+      "img": "/projects/lilseeground/cases/scene0063_00_q1.jpg"
+    }
+  ],
+  "failures": [
+    {
+      "id": "scene0015_00_q1",
+      "query": "there is an office chair. placed on the side of the wall.",
+      "iou4b": 0,
+      "iou2b": 0,
+      "img": "/projects/lilseeground/cases/scene0015_00_q1.jpg"
+    },
+    {
+      "id": "scene0019_00_q3",
+      "query": "there are two black chairs situated between six brown chairs and a black couch. this black chair is next to the black couch. it appears to be leather. it is black. there is a snack machine on the opposite wall.",
+      "iou4b": 0.013,
+      "iou2b": 0.013,
+      "img": "/projects/lilseeground/cases/scene0019_00_q3.jpg"
+    }
+  ]
+}

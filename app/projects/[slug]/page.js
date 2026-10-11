@@ -2,6 +2,7 @@ import { projects, getProjectBySlug } from '@/data/projects';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
+import { featuredPages } from '@/components/projects/registry';
 
 export function generateStaticParams() {
   return projects.map(p => ({ slug: p.slug }));
@@ -21,6 +22,9 @@ export default async function ProjectPage({ params }) {
   const { slug } = await params;
   const project = getProjectBySlug(slug);
   if (!project) notFound();
+
+  const Featured = featuredPages[slug];
+  if (Featured) return <Featured project={project} />;
 
   const isResearch = project.type.startsWith('Research');
 
